@@ -1,0 +1,362 @@
+@charset "UTF-8";
+
+body {
+  font-family: "Microsoft YaHei";
+}
+
+.h1, .h2, h3, h1, h2, h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.container-fluid, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+button {
+  border: none;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+input {
+  width: 100%;
+  background-color: #EEEEEE;
+  border: none;
+  &[type=text], &[type=password] {
+    line-height: 32px;
+    padding-left: 20px;
+    border-left: 6px solid #EEEEEE;
+    &:focus {
+      outline: 2px solid #8B9297;
+    }
+    &~span.errorMsg {
+      display: none;
+    }
+    &.error {
+      border-left: 6px solid #FF0000;
+      &~span.errorMsg {
+        color: #FF0000;
+        display: block;
+      }
+    }
+  }
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 14px;
+}
+
+.p1 {
+  font-size: 12px;
+  color: #8B9297;
+}
+
+.number1 {
+  font-size: 32px;
+}
+
+.number2 {
+  font-size: 28px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.height30Btn1 {
+  height: 30px;
+  color: #FFFFFF;
+  background-color: #2B3941;
+  &:hover {
+    color: #FFFFFF;
+    background-color: #556167;
+  }
+  &:active {
+    color: #FFFFFF;
+    background-color: #000000;
+  }
+}
+
+.height60Btn1 {
+  height: 60px;
+  color: #FFFFFF;
+  background-color: #2B3941;
+  &:hover {
+    color: #FFFFFF;
+    background-color: #556167;
+  }
+  &:active {
+    color: #FFFFFF;
+    background-color: #000000;
+  }
+  &:disabled {
+    background-color: #8B9297;
+  }
+}
+
+.height80Btn1 {
+  height: 80px;
+  color: #FFFFFF;
+  background-color: #2B3941;
+  &:hover {
+    color: #FFFFFF;
+    background-color: #556167;
+  }
+  &:active {
+    color: #FFFFFF;
+    background-color: #000000;
+  }
+}
+
+.height30Btn3 {
+  height: 30px;
+  color: #FFFFFF;
+  background-color: #8B9297;
+  &:hover {
+    color: #FFFFFF;
+    background-color: #C1C7CB;
+  }
+  &:active {
+    color: #FFFFFF;
+    background-color: #5A6064;
+  }
+}
+
+.height50Btn4 {
+  height: 50px;
+  color: #384953;
+  background-color: #F7F7F7;
+  &:hover {
+    color: #FFFFFF;
+    background-color: #2B393F;
+  }
+  &:active {
+    color: #FFFFFF;
+    background-color: #BCBABA;
+  }
+}
+
+.tabSwitch .freeWidth {
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.dropDownMenu2 {
+  display: none;
+  line-height: 45px;
+  background-color: #2D424D;
+  margin-left: 135px;
+  width: 240px;
+  float: right;
+  position: relative;
+  z-index: 10;
+  right: -10px;
+  &~.arrow {
+    width: 14px;
+    height: 6px;
+    background-image: url(../images/style2_arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &>div {
+    cursor: pointer;
+    text-indent: 15px;
+    opacity: 0.5;
+    border-bottom: 2px solid #2B3941;
+    &:hover {
+      opacity: 1;
+      background-color: #1F2D35;
+    }
+    &:active {
+      opacity: 1;
+      background-color: #11191E;
+    }
+  }
+}
+
+.dropDownMenu4 {
+  display: none;
+  line-height: 45px;
+  color: #384953;
+  background-color: #F7F7F7;
+  margin-top: 2px;
+  margin-left: 135px;
+  width: 240px;
+  float: right;
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  &~.arrow {
+    width: 14px;
+    height: 6px;
+    background-image: url(../images/style4_arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &>div {
+    cursor: pointer;
+    text-indent: 15px;
+    opacity: 0.5;
+    border-bottom: 2px solid #D5D5D5;
+    &:hover {
+      opacity: 1;
+      color: #FFFFFF;
+      background-color: #C1C7CB;
+    }
+    &:active {
+      opacity: 1;
+      color: #FFFFFF;
+      background-color: #8B9297;
+    }
+  }
+}
+
+nav {
+  height: 80px;
+  line-height: 80px;
+  background-color: #2B3941;
+  color: #FFFFFF;
+  margin: 0px auto;
+  padding-left: 10px;
+}
+
+.brandName {
+  background-image: url(../images/parklu_logo.png);
+  width: 100px;
+  height: 29px;
+  display: inline-block !important;
+  vertical-align: middle;
+}
+
+.navItem {
+  cursor: pointer;
+  display: inline;
+  padding: 5px 0px;
+  margin-left: 20px;
+  &:hover {
+    color: #C1C7CB;
+  }
+  &:active {
+    color: #8B9297;
+  }
+  &.navMenu {
+    opacity: 0.5;
+    &.current, &:hover{
+      opacity: 1;
+      border-bottom: 1px solid #FFFFFF;
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+#navbarTopRight {
+  padding-right: 10px;
+}
+
+#navbarAvatar {
+  display: inline-block;
+  width: 70px;
+  height: 47px;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.subMenuSet>:nth-child(3) {
+  display: inline-block;
+}
+
+#main {
+  margin-top: 80px;
+  width: 1190px;
+  padding-left: 10px;
+}
+
+.tabSwitch {
+  height: 53px;
+  line-height: 50px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #D5D5D5;
+  .tabSwitchItem {
+    border-bottom: 2px solid #D5D5D5;
+    font-size: 14px;
+    color: #636A6A;
+    &.tabSwitchTitle {
+      font-size: 18px;
+      color: #636A6A;
+    }
+    &.hoverable {
+      cursor: pointer;
+      color: rgba(99, 106, 106, 0.5);
+      &.current, &:hover {
+        color: #0D98E8;
+        border-bottom: 2px solid #0D98E8;
+        background: linear-gradient(0deg, #0D98E8 0px, #FFFFFF 2px);
+      }
+    }
+  }
+}
+
+.paginationItem {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 5px;
+  color: #D5D5D5;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 32px;
+}
+
+.paginationNumber {
+  border: 2px solid #D5D5D5;
+  border-radius: 50%;
+  &:hover {
+    border: 2px solid #19699C;
+    color: #19699C;
+  }
+}
+
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  .border {
+    min-width: 380px;
+    background-color: rgba(0, 0, 0, 0.2);
+    .content {
+      margin: 5px;
+      padding: 5px;
+      background-color: #FFFFFF;
+      hr {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      button {
+        margin-top: 15px;
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+@charset "UTF-8";
+.collaborationDetailCover {
+  height: 350px;
+  margin-bottom: 25px;
+}
+
+.collaborationDetailLeft {
+  padding-left: 7px;
+  padding-right: 7px;
+  button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .collaborationDetailLogo {
+    height: 188px;
+    margin-top: -45px;
+    margin-bottom: 20px;
+  }
+  .collaborationDetailDate {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    &.statusDraft {
+      background-color: #F1BC00;
+      .month {
+        margin-top: 15px;
+      }
+    }
+    &.statusProgressing {
+      background-color: #0D98E8;
+      .month {
+        margin-top: 15px;
+      }
+    }
+    &.statusFinish {
+      background-color: #4EA1A7;
+      .month {
+        margin-top: 15px;
+      }
+    }
+    &.statusKeep {
+      background-color: #B0B5BA;
+      .month {
+        margin-top: 15px;
+      }
+    }
+  }
+  .collaborationDetailStatus {
+    float: left;
+    width: 201px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background-color: #F0F0F0;
+    h2 {
+      margin-top: 30px;
+    }
+  }
+  .collaborationDetailTarget {
+    &>p {
+      line-height: 28px;
+      vertical-align: top;
+    }
+    &>p>i {
+      margin-right: 15px;
+    }
+  }
+  .socialPlatform {
+    div {
+      width: 30px;
+      height: 25px;
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+    .wechat {
+      background-image: url(../images/wechat_left_panel.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .nice {
+      background-image: url(../images/nice_left_panel.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .weibo {
+      background-image: url(../images/weibo_left_panel.png);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  .point {
+    &~div {
+      hr, h3, p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.collaborationDetailRight {
+  padding-left: 17px;
+  padding-right: 7px;
+  hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  h2, h3 {
+    margin-bottom: 25px;
+  }
+  .star {
+    margin-right: 5px;
+  }
+  .socialPlatform {
+    .weibo {
+      background-image: url(../images/weibo_stats.png);
+      background-repeat: no-repeat;
+      background-position-y: 2px;
+      padding-left: 20px;
+    }
+    .weixin {
+      background-image: url(../images/wechat_stats.png);
+      background-repeat: no-repeat;
+      background-position-y: 2px;
+      padding-left: 20px;
+    }
+    .nice {
+      background-image: url(../images/nice_stats.png);
+      background-repeat: no-repeat;
+      background-position-y: 2px;
+      padding-left: 20px;
+    }
+    .instagram {
+      background-image: url(../images/instagram_stats.png);
+      background-repeat: no-repeat;
+      background-position-y: 2px;
+      padding-left: 20px;
+    }
+  }
+
+  .bloggerAvatar {
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 25px;
+  }
+  .socialPlatform {
+    h3 {
+      display: inline;
+    }
+  }
+  .blogger {
+    margin-bottom: 20px;
+    .avatar {
+      width: 180px;
+      height: 180px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-bottom: 5px;
+    }
+    .socialPlatform {
+      height: 32px;
+      padding-top: 8px;
+    }
+    .col-xs-10 {
+      padding-left: 17px;
+    }
+    h3 {
+      margin-bottom: 5px;
+    }
+  }
+}
