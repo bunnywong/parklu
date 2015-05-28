@@ -7,14 +7,14 @@
     <title>parkLU</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet/less" type="text/css">
+    <link href="css/main.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="js/html5shiv-3.7.2.min.js"></script>
     <script src="js/respond-1.4.2.min.js"></script>
     <![endif]-->
   </head>
-  <body class="step-2 steps">
+  <body class="step-3 steps">
     <nav class="navbar-fixed-top">
       <div class="container-fluid">
         <div class="col-xs-10">
@@ -251,11 +251,9 @@
                 </div>
               </div>
             </div> <!-- blogger-row -->
+          </div>
 
-            </div>
-
-
-            <div class="row">
+            <div class="row debug">
               <div class="section-bar pull-left"></div>
 
               <div class="content-data">
@@ -313,6 +311,9 @@
     <script src="js/starRate.js"></script>
     <script>
     $(function() {
+
+      /* Top section I/O
+      -------------------------------------------------- */
       $('.js-content-switch').on('click', function() {
         var closed = $('.content').hasClass('hidden');
         if(closed) {
@@ -322,7 +323,7 @@
           $('.content').addClass('hidden').slideUp('slow');
           $('.js-switch').removeClass('ico-closed').addClass('ico-opened');
         }
-      })
+      });
 
     });
     </script>
