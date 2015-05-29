@@ -1,4 +1,34 @@
 @charset "UTF-8";
+
+.subMenuSet>:nth-child(3) {
+  display: inline-block;
+}
+.modal {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  .border {
+    min-width: 380px;
+    background-color: rgba(0, 0, 0, 0.2);
+    .content {
+      margin: 5px;
+      padding: 5px;
+      background-color: white;
+      hr {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      button {
+        margin-top: 15px;
+        padding-left: 35px;
+        padding-right: 35px;
+      }
+    }
+  }
+}
+
 .collaborationDetailCover {
   height: 350px;
   margin-bottom: 25px;

@@ -1,5 +1,6 @@
 /*
 -- Table of content
+
  =var
  =TODO:rename
  =Debug
@@ -64,12 +65,12 @@ input {
     &:focus {
       outline: 2px solid @gray;
     }
-    &~span.errorMsg {
+    &~span.error-msg {
       display: none;
     }
     &.error {
       border-left: 6px solid #FF0000;
-      &~span.errorMsg {
+      &~span.error-msg {
         color: #FF0000;
         display: block;
       }
@@ -77,97 +78,15 @@ input {
   }
 }
 
-
-// ***
-.height30Btn1 {
-  height: 30px;
-  color: #FFFFFF;
-  background-color: @black;
-  &:hover {
-    color: #FFFFFF;
-    background-color: #556167;
-  }
-  &:active {
-    color: #FFFFFF;
-    background-color: #000000;
-  }
-}
-
-.height60Btn1 {
-  height: 60px;
-  color: #FFFFFF;
-  background-color: @black;
-  &:hover {
-    color: #FFFFFF;
-    background-color: #556167;
-  }
-  &:active {
-    color: #FFFFFF;
-    background-color: #000000;
-  }
-  &:disabled {
-    background-color: @gray;
-  }
-}
-
-.height80Btn1 {
-  height: 80px;
-  color: #FFFFFF;
-  background-color: @black;
-  &:hover {
-    color: #FFFFFF;
-    background-color: #556167;
-  }
-  &:active {
-    color: #FFFFFF;
-    background-color: #000000;
-  }
-}
-
-.height30Btn3 {
-  height: 30px;
-  color: #FFFFFF;
-  background-color: @gray;
-  &:hover {
-    color: #FFFFFF;
-    background-color: #C1C7CB;
-  }
-  &:active {
-    color: #FFFFFF;
-    background-color: #5A6064;
-  }
-}
-
-.height50Btn4 {
-  height: 50px;
-  color: #384953;
-  background-color: @white;
-  &:hover {
-    color: #FFFFFF;
-    background-color: #2B393F;
-  }
-  &:active {
-    color: #FFFFFF;
-    background-color: #BCBABA;
-  }
-}
-
-.tabSwitch .freeWidth {
-  float: left;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.dropDownMenu2 {
-  display: none;
+.dropdown-menu {
   line-height: 45px;
   background-color: @black-light;
   margin-left: 135px;
   width: 240px;
   float: right;
   position: relative;
-  z-index: 10;
   right: -10px;
+  z-index: 10;
   &~.arrow {
     width: 14px;
     height: 6px;
@@ -191,48 +110,11 @@ input {
   }
 }
 
-.dropDownMenu4 {
-  display: none;
-  line-height: 45px;
-  color: #384953;
-  background-color: @white;
-  margin-top: 2px;
-  margin-left: 135px;
-  width: 240px;
-  float: right;
-  position: absolute;
-  z-index: 10;
-  right: 0;
-  &~.arrow {
-    width: 14px;
-    height: 6px;
-    background-image: url(../images/style4_arrow.png);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  &>div {
-    cursor: pointer;
-    text-indent: 15px;
-    opacity: 0.5;
-    border-bottom: 2px solid #D5D5D5;
-    &:hover {
-      opacity: 1;
-      color: #FFFFFF;
-      background-color: #C1C7CB;
-    }
-    &:active {
-      opacity: 1;
-      color: #FFFFFF;
-      background-color: @gray;
-    }
-  }
-}
-
 nav {
   height: 80px;
   line-height: 80px;
   background-color: @black;
-  color: #FFFFFF;
+  color: white;
   margin: 0px auto;
   padding-left: 10px;
 }
@@ -260,7 +142,7 @@ nav {
     opacity: 0.5;
     &.current, &:hover{
       opacity: 1;
-      border-bottom: 1px solid #FFFFFF;
+      border-bottom: 1px solid white;
     }
     &:active {
       color: rgba(255, 255, 255, 0.5);
@@ -311,7 +193,7 @@ nav {
       &.current, &:hover {
         color: #0D98E8;
         border-bottom: 2px solid #0D98E8;
-        background: linear-gradient(0deg, #0D98E8 0px, #FFFFFF 2px);
+        background: linear-gradient(0deg, #0D98E8 0px, white 2px);
       }
     }
   }
@@ -349,7 +231,7 @@ nav {
     .content {
       margin: 5px;
       padding: 5px;
-      background-color: #FFFFFF;
+      background-color: white;
       hr {
         margin-top: 5px;
         margin-bottom: 5px;
