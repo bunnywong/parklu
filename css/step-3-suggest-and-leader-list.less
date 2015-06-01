@@ -1,0 +1,152 @@
+/*
+- Table of content -
+
+ =Debug
+ =Import
+ =Step 3
+-------------------------------------------------- */
+
+
+/* =Debug
+-------------------------------------------------- */
+.debug {
+  border: 1px solid red;
+}
+.debug2 {
+  border: 1px solid green;
+}
+.debug3 {
+  border: 1px solid blue;
+}
+.debugbg {
+  background-color: pink;
+}
+
+/*  =Import
+-------------------------------------------------- */
+@import "main.less";
+
+/*  =Step 3
+    Pixl perfect Ref: Step-3_Full.png | x150 : y0
+-------------------------------------------------- */
+
+body.step-3 {
+  .my-container {
+    width: 1210px; // Bootstrap standard as 1170px;
+  }
+	section.step-bar {
+		margin-top: 110px;
+		border: 1px solid @gray;
+		border-radius: 50px;
+		font-size: 16px;
+
+		.col-md-15 {
+			padding: 0px;
+			div {
+				@base: 15px;
+				border-radius: 20px;
+				padding: 10px;
+				left: -@base;
+				width: 100%+@base;
+				position: relative;
+			}
+			div.active {
+				color: @white;
+				background-color: @black;
+			}
+		}
+	}
+	section.hero {
+		margin-top: 30px;
+		background: @gray-light;
+		padding: 20px 40px 0px 40px;
+		min-height: 150px;
+		a.content-switch {
+			padding: 10px;
+			float: right;
+		}
+		.description {
+			span {
+				font-size: 14px;
+				&:not(.first) {
+					margin-left: 20px;
+				}
+			}
+		}
+		.section-bar {
+			margin-top: 20px;
+			width: 100%;
+			height: 1px;
+			border-bottom: 1px solid @gray;
+		}
+		.content {
+			.bloggers {
+				.blogger-row {
+					.blogger-wrapper {
+						float: left;
+						&:not(.first) {
+							margin-left: 10px;
+						}
+						.status-bar-wrapper {
+							.status-bar {
+								margin-top: 5px;
+								height: 5px;
+								width: 33%;
+								float: left;
+								&.empty {
+									background-color: @gray;
+								}
+								&.yellow {
+									background-color: @yellow;
+								}
+								&.pink {
+									background-color: @pink;
+								}
+								&.green {
+									background-color: @green;
+								}
+							}
+						}
+						.sprite {
+							float: left;
+							margin-right: 5px;
+							width: 19px;
+							height: 15px;
+							&.weibo-on {
+								background: url(../images/top-section/weibo_logo_red.png) no-repeat;
+							}
+							&.weibo-off {
+								background: url(../images/top-section/weibo_logo_grey.png) no-repeat;
+							}
+							&.wechat-on {
+								background: url(../images/top-section/wechat_logo_green.png) no-repeat;
+							}
+							&.wechat-off {
+								background: url(../images/top-section/wechat_logo_grey.png) no-repeat;
+							}
+						}
+						p {
+							color: @gray;
+						}
+					}
+				}
+			}
+			.content-data {
+				.social {
+					&.weibo {
+						background: url(../images/)
+					}
+				}
+			}
+			.data-wrapper {
+				margin-right: 20px;
+			}
+		}
+	}
+}
+
+
+
+
+
+
