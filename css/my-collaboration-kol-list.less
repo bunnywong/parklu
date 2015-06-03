@@ -3,6 +3,7 @@
 
  =Debug
  =Import
+ =To be move
  =Step 3
   (PerfectPixel: 140 / 3)
 -------------------------------------------------- */
@@ -33,6 +34,14 @@ article {
 /*  =Import
 -------------------------------------------------- */
 @import "main.less";
+
+
+/*  =To be move
+-------------------------------------------------- */
+.transparent-top-border {
+  // For sorting dropdown
+  border-top: 1px solid transparent!important;
+}
 
 /*  =Step 3
     Pixl perfect Ref: Step-3_Full.png | x150 : y0
@@ -140,6 +149,7 @@ body.kol-list {
           }
         }
         a.content-switch-arrow {
+          top: -8px;
           padding: 10px;
           float: right;
           right: -10px;
@@ -376,6 +386,12 @@ body.kol-list {
                     border: 1px solid @green;
                   }
                 }
+              }
+            }
+            .past-post-row {
+              a {
+                top: 5px;
+                position: relative;
               }
             }
             .past-post-wrapper {

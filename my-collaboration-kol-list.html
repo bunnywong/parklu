@@ -78,7 +78,7 @@
           <article class="description-container">
             <h3>
               <span>增加销售，提高知名度</span>
-              <a class="content-switch-arrow" data-toggle="collapse" href="#joined-bloggers-container" aria-expanded="false" aria-controls="hidden-content">
+              <a class="content-switch-arrow js-content-switch-arrow" data-toggle="collapse" href="#joined-bloggers-container" aria-expanded="false" aria-controls="hidden-content" data-group="joined-bloggers-container">
                 <div class="sprite ico-closed js-arrow"></div>
               </a>
             </h3>
@@ -91,7 +91,7 @@
             </p>
           </article>
 
-          <article class="collapse in js-collapse joined-bloggers-container" id="joined-bloggers-container">
+          <article class="collapse DEBUG-in js-collapse joined-bloggers-container" id="joined-bloggers-container" data-group="joined-bloggers-container">
             <hr class="section-bar">
             <h3>参与博客（请选择 最少15个博客）</h3>
 
@@ -362,7 +362,7 @@
                   排序方式
                   <div class="img img-arrow inline-block"></div>
                 </button>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <ul class="dropdown-menu js-ul-dropdown-sort" role="menu" aria-labelledby="dropdownMenu1">
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">relevancy(default)</a></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span>reach high to low</span></a></li>
                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span>price high to low</span></a></li>
@@ -439,18 +439,20 @@
                       <div class="row">
                         <hr>
                         <div class="col-xs-12">
-                          <span class="past-post">Past Post</span>
-                          <span class="img pull-right">
-                             <a class="content-switch-arrow" data-toggle="collapse" href="#past-post-1" aria-expanded="false" aria-controls="hidden-content">
-                              <div class="sprite ico-closed js-arrow"></div>
-                            </a>
-                          </span>
+                          <div class="past-post-row">
+                            <span class="past-post">Past Post</span>
+                            <span class="pull-right">
+                               <a class="content-switch-arrow js-content-switch-arrow" data-toggle="collapse" href="#past-post-1" aria-expanded="false" aria-controls="hidden-content" data-group="past-post-1">
+                                <div class="sprite ico-closed js-arrow"></div>
+                              </a>
+                            </span>
+                          </div>
                         </div>
                       </div>
 
                       <div class="row">
                         <div class="col-xs-12">
-                          <div class="collapse js-collapse past-post-wrapper" id="past-post-1">
+                          <div class="collapse js-collapse past-post-wrapper" id="past-post-1" data-group="past-post-1">
                             <h2>谁说长大后不能和好朋友住在一起?</h2>
                             <p>(u3s aute 3rure .o5or 3n re9re2en.er3t 3n vo5u9tate ve53t esse c355u6 .o5ore eu 0u13at nu55a 9ar3atur. )xce9teur s3nt occaecat cu93.atat non 9ro3.ent, sunt 3n cu59a qu3 o003c3a .eserunt 6o553t an36 3. est 5a,oru6.</p>
 
@@ -596,18 +598,20 @@
                       <div class="row">
                         <hr>
                         <div class="col-xs-12">
-                          <span class="past-post">Past Post</span>
-                          <span class="img pull-right">
-                             <a class="content-switch-arrow" data-toggle="collapse" href="#past-post-12" aria-expanded="false" aria-controls="hidden-content">
-                              <div class="sprite ico-closed js-arrow"></div>
-                            </a>
-                          </span>
+                          <div class="past-post-row">
+                            <span class="past-post">Past Post</span>
+                            <span class="img pull-right">
+                               <a class="content-switch-arrow js-content-switch-arrow" data-toggle="collapse" href="#past-post-12" aria-expanded="false" aria-controls="hidden-content" data-group="past-post-12">
+                                <div class="sprite ico-closed js-arrow"></div>
+                              </a>
+                            </span>
+                          </div>
                         </div>
                       </div>
 
                       <div class="row">
                         <div class="col-xs-12">
-                          <div class="collapse js-collapse past-post-wrapper" id="past-post-12">
+                          <div class="collapse js-collapse past-post-wrapper" id="past-post-12" data-group="past-post-12">
                             <h2>谁说长大后不能和好朋友住在一起?</h2>
                             <p>(u3s aute 3rure .o5or 3n re9re2en.er3t 3n vo5u9tate ve53t esse c355u6 .o5ore eu 0u13at nu55a 9ar3atur. )xce9teur s3nt occaecat cu93.atat non 9ro3.ent, sunt 3n cu59a qu3 o003c3a .eserunt 6o553t an36 3. est 5a,oru6.</p>
 
@@ -756,18 +760,20 @@
                       <div class="row">
                         <hr>
                         <div class="col-xs-12">
-                          <span class="past-post">Past Post</span>
-                          <span class="img pull-right">
-                             <a class="content-switch-arrow" data-toggle="collapse" href="#past-post-2" aria-expanded="false" aria-controls="hidden-content">
-                              <div class="sprite ico-closed js-arrow"></div>
-                            </a>
-                          </span>
+                          <div class="past-post-row">
+                            <span class="past-post">Past Post</span>
+                            <span class="img pull-right">
+                               <a class="content-switch-arrow js-content-switch-arrow" data-toggle="collapse" href="#past-post-2" aria-expanded="false" aria-controls="hidden-content" data-group="past-post-2">
+                                <div class="sprite ico-closed js-arrow"></div>
+                              </a>
+                            </span>
+                          </div>
                         </div>
                       </div>
 
                       <div class="row">
                         <div class="col-xs-12">
-                          <div class="collapse js-collapse past-post-wrapper" id="past-post-2">
+                          <div class="collapse js-collapse past-post-wrapper" id="past-post-2" data-group="past-post-2">
                             <h2>谁说长大后不能和好朋友住在一起?</h2>
                             <p>(u3s aute 3rure .o5or 3n re9re2en.er3t 3n vo5u9tate ve53t esse c355u6 .o5ore eu 0u13at nu55a 9ar3atur. )xce9teur s3nt occaecat cu93.atat non 9ro3.ent, sunt 3n cu59a qu3 o003c3a .eserunt 6o553t an36 3. est 5a,oru6.</p>
 
@@ -915,18 +921,20 @@
                       <div class="row">
                         <hr>
                         <div class="col-xs-12">
-                          <span class="past-post">Past Post</span>
-                          <span class="img pull-right">
-                             <a class="content-switch-arrow" data-toggle="collapse" href="#past-post-3" aria-expanded="false" aria-controls="hidden-content">
-                              <div class="sprite ico-closed js-arrow"></div>
-                            </a>
-                          </span>
+                          <div class="past-post-row">
+                            <span class="past-post">Past Post</span>
+                            <span class="img pull-right">
+                               <a class="content-switch-arrow js-content-switch-arrow" data-toggle="collapse" href="#past-post-3" aria-expanded="false" aria-controls="hidden-content" data-group="past-post-3">
+                                <div class="sprite ico-closed js-arrow"></div>
+                              </a>
+                            </span>
+                          </div>
                         </div>
                       </div>
 
                       <div class="row">
                         <div class="col-xs-12">
-                          <div class="collapse js-collapse past-post-wrapper" id="past-post-3">
+                          <div class="collapse js-collapse past-post-wrapper" id="past-post-3" data-group="past-post-3">
                             <h2>谁说长大后不能和好朋友住在一起?</h2>
                             <p>(u3s aute 3rure .o5or 3n re9re2en.er3t 3n vo5u9tate ve53t esse c355u6 .o5ore eu 0u13at nu55a 9ar3atur. )xce9teur s3nt occaecat cu93.atat non 9ro3.ent, sunt 3n cu59a qu3 o003c3a .eserunt 6o553t an36 3. est 5a,oru6.</p>
 
