@@ -215,9 +215,11 @@ body.kol-list {
               max-width: 140px;
               overflow: hidden;
               position: relative;
-              img {
-                // todo: chop img as full size
-              }
+              background-image: url(../images/top-section/kol_profile_img.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+              height: 140px;
+              width: 140px;
               div.img-delete {
                 display: none;
                 right: 10px;
@@ -512,19 +514,26 @@ body.kol-list {
   }
 
   .modal-container {
-    z-index: 10000; // DEBUG
     .modal-dialog {
       width: 1200px;
+      .img-cross {
+        background-image: url(../images/modal/close_btn.png);
+        background-repeat: no-repeat;
+        height: 39px;
+        width: 39px;
+        right: 25px;
+        top: 25px;
+      }
       .modal-content {
         background-color: @white-bg;
         margin-top: 80px;
         border: 10px solid @black;
         border-radius: 0px;
-        min-height: 1000px; // DEBUG
         .my-container {
           margin-top: 75px;
           width: 1050px;
           .header-wrapper {
+            padding-bottom: 35px;
             .left-container {
               .img-wrapper {
                 height: 180px;
@@ -591,7 +600,7 @@ body.kol-list {
             }
           }
           .body-wrapper {
-            .blog-wrapper {
+            article.blog-wrapper {
               margin-top: 15px;
               background-color: @white;
               padding: 10px;
