@@ -2,4 +2,4 @@
 
 TODO:
 	Page: my collaboration KOL list
-	- Facebook icon
+	- Fix sort menu
