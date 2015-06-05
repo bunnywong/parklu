@@ -41,72 +41,79 @@
     </nav>
     <div id="main" class="container-fluid">
       <div class="col-xs-2"></div>
-      <div class="col-xs-8" ng-controller="ContactFormController">
+      <div class="col-xs-8" ng-controller="DeliveryFormController">
         <div class="container-fluid tabSwitch">
           <div class="col-xs-9">
-            <div class="text-center freeWidth tabSwitchItem tabSwitchTitle">聯絡方法</div>
+            <div class="text-center freeWidth tabSwitchItem tabSwitchTitle">送貨方法</div>
           </div>
         </div>
 
-        <div ng-repeat="formNumber in contactForms">
+        <div ng-repeat="formNumber in forms">
           <div class="container-fluid formItem">
             <div class="col-xs-12">
-              <div class="col-xs-4">聯絡人{{formNumber}}</div>
-              <div class="col-xs-8">
-                <button class="height30Btn1 floatRight" ng-click="removeForm(formNumber)">刪除</button>
+              <div class="col-xs-3">送貨名字</div>
+              <div class="col-xs-9"><input name="deliveryName"/></div>
+            </div>
+          </div>
+
+          <div class="container-fluid formItem">
+            <div class="col-xs-12">
+              <div class="col-xs-6">
+                <div class="col-xs-6">送貨日子（最小）</div>
+                <div class="col-xs-6"><input name="deliveryDateEarly"/></div>
+              </div>
+              <div class="col-xs-6 formColumn2">
+                <div class="col-xs-6">送貨日子（最多）</div>
+                <div class="col-xs-6"><input name="deliveryDateLate"/></div>
               </div>
             </div>
           </div>
 
           <div class="container-fluid formItem">
-            <div class="col-xs-6">
-              <div class="col-xs-6">聯系人名字</div>
-              <div class="col-xs-6"><input name="name" /></div>
-            </div>
-
-            <div class="col-xs-6 formColumn2">
-              <div class="col-xs-6">職稱</div>
-              <div class="col-xs-6"><input name="occupation" /></div>
+            <div class="col-xs-12">
+              <div class="col-xs-3">送貨價錢</div>
+              <div class="col-xs-9"><input name="deliveryPrice"/></div>
             </div>
           </div>
 
           <div class="container-fluid formItem">
             <div class="col-xs-12">
-              <div class="col-xs-3">電郵地址</div>
-              <div class="col-xs-9"><input name="email" /></div>
+              <div class="col-xs-3">稅收</div>
+              <div class="col-xs-9"><input name="tax"/></div>
             </div>
           </div>
 
           <div class="container-fluid formItem">
-            <div class="col-xs-6">
-              <div class="col-xs-6">電話</div>
-              <div class="col-xs-6"><input name="tel" /></div>
-            </div>
-
-            <div class="col-xs-6 formColumn2">
-              <div class="col-xs-6">微信（自選）</div>
-              <div class="col-xs-6"><input name="wechat" /></div>
+            <div class="col-xs-12">
+              <div class="col-xs-3">稅收</div>
+              <div class="col-xs-9">
+                <div class="col-xs-3">
+                  <img src="images/form/radiobtn_on.png" />
+                  <label>包括在價格</label>
+                </div>
+                
+                <div class="col-xs-3">
+                  <img src="images/form/radiobtn_off.png" />
+                  <label>上述合計</label>
+                </div>
+                
+                <div class="col-xs-3">
+                  <img src="images/form/radiobtn_on.png" />
+                  <label>不包括在價格</label>
+                </div>
+                
+                <div class="col-xs-3"></div>
+              </div>
             </div>
           </div>
 
-          <div class="container-fluid formItem">
-            <div class="col-xs-6">
-              <div class="col-xs-6">微博（自選）</div>
-              <div class="col-xs-6"><input name="weibo" /></div>
-            </div>
-
-            <div class="col-xs-6 formColumn2">
-              <div class="col-xs-6">Skype（自選）</div>
-              <div class="col-xs-6"><input name="occupation" /></div>
-            </div>
-          </div>
-
+          <hr class="formHr" ng-if="!$last">
         </div>
 
         <div class="container-fluid formItem">
           <div class="col-xs-3"></div>
           <div class="col-xs-9 text-center">
-            <button class="height50Btn4 fullWidth" ng-click="addForm()">&#43; 加其他聯系人</button>
+            <button class="height50Btn4 fullWidth" ng-click="addForm()">&#43; 加其他送貨方法</button>
           </div>
         </div>
         

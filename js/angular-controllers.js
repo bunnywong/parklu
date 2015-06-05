@@ -14,3 +14,13 @@ myApp.controller('ContactFormController', function ($scope) {
         $scope.contactForms.splice(index, 1);
     };
 });
+
+myApp.controller('DeliveryFormController', function ($scope) {
+    $scope.formNumber = 1;
+    $scope.forms = [$scope.formNumber];
+
+    $scope.addForm = function () {
+        $scope.formNumber++;
+        $scope.forms.push($scope.formNumber);
+    };
+});
