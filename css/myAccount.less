@@ -302,6 +302,31 @@ hr.formHr {
   background-color: @white;
   max-width: 90%;
   height: 100px;
+  &>input[type='file'] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .uploadBtn {
+    font-size: 5px;
+    height: 15px;
+    color: white;
+    background-color: @gray;
+    padding-left: 12px;
+    padding-right: 12px;
+    &:hover {
+      color: white;
+      background-color: #C1C7CB;
+    }
+    &:active {
+      color: white;
+      background-color: #5A6064;
+    }
+  }
+  .uploadContentDiv {
+    line-height: 60px;
+  }
 }
 
 textarea {
