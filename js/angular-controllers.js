@@ -16,11 +16,21 @@ myApp.controller('ContactFormController', function ($scope) {
 });
 
 myApp.controller('DeliveryFormController', function ($scope) {
-    $scope.formNumber = 1;
-    $scope.forms = [$scope.formNumber];
+    var formNumber = 1;
+    $scope.forms = [formNumber];
 
     $scope.addForm = function () {
-        $scope.formNumber++;
-        $scope.forms.push($scope.formNumber);
+        formNumber++;
+        $scope.forms.push(formNumber);
+    };
+});
+
+myApp.controller('EditCompanyFormController', function ($scope) {
+    socialNetworkNumber = 0;
+    $scope.forms = [];
+
+    $scope.addSocialNetwork = function () {
+        socialNetworkNumber++;
+        $scope.forms.push(socialNetworkNumber);
     };
 });
