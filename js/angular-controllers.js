@@ -46,7 +46,7 @@ myApp.controller('EditCompanyFormController', function ($scope) {
     };
 });
 
-myApp.controller('PasswordFormController', function ($scope) {
+myApp.controller('EmailFormController', function ($scope) {
     $scope.isValidEmail = true;
     $scope.isValidNewEmail = true;
     $scope.isValidPassword = true;
@@ -57,5 +57,19 @@ myApp.controller('PasswordFormController', function ($scope) {
 
     $scope.checkPassword = function (password) {
         return isValidPassword(password);
+    };
+});
+
+myApp.controller('PasswordFormController', function ($scope) {
+    $scope.isValidPassword = true;
+    $scope.isValidNewPassword = true;
+    $scope.isValidNewPasswordRepeat = true;
+
+    $scope.checkPassword = function (password) {
+        return isValidPassword(password);
+    };
+
+    $scope.checkRepeatPassword = function () {
+        return $scope.newPassword == $scope.newPasswordRepeat;
     }
 });
