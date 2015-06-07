@@ -27,13 +27,9 @@ $(function() {
       $(this).next('li').children('a').removeClass('transparent-top-border');
     });
 
-  /* =Save
-  -------------------------------------------------- */
-  $('.js-save').on('click',function() {
-    $('.js-collapse').collapse('toggle');
-  });
 
-  // Checkbox
+  /* =Checkbox ( 4 type )
+  -------------------------------------------------- */
 
   $('.js-checkbox').on('change', function() {
     var groupName       = $(this).data('group');

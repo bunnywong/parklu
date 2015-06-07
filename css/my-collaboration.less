@@ -42,6 +42,30 @@ article {
   // For sorting dropdown
   border-top: 1px solid transparent!important;
 }
+.col-xs-15,
+    .col-sm-15,
+    .col-md-15,
+    .col-lg-15 {
+    position      : relative;
+    min-height    : 1px;
+    padding-right : 15px;
+    padding-left  : 15px;
+  }
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+    &.col-lg-15-2 {
+      width: 40%;
+    }
+    &.col-lg-15-3 {
+      width: 60%;
+    }
+    &.col-lg-15-4 {
+      width: 80%;
+    }
+  }
+}
 
 /*  =Step 3
     Pixl perfect Ref: Step-3_Full.png | x150 : y0
@@ -310,31 +334,31 @@ body.kol-list {
     padding: 20px 0px 15px 0px;
     min-width: 180px
   }
-.checkbox {
-  @base: 25px;
-  margin-left: 0px;
-  // Tick box
-  label::before {
-    margin-top: 25px;
-    margin-left: -@base;
-    height: 30px;
-    width: 30px;
-    border: 2px solid @black;
-    border-radius: 0px;
+  .checkbox {
+    @base: 25px;
+    margin-left: 0px;
+    // Tick box
+    label::before {
+      margin-top: 25px;
+      margin-left: -@base;
+      height: 30px;
+      width: 30px;
+      border: 2px solid @black;
+      border-radius: 0px;
+    }
+    label.disable::before {
+      border: 2px solid @gray;
+    }
+    // Tick
+    label::after {
+      margin-top: 22px;
+      margin-left: -@base;
+      font-size: 25px;
+    }
+    label.disable::after {
+      color: @gray;
+    }
   }
-  label.disable::before {
-    border: 2px solid @gray;
-  }
-  // Tick
-  label::after {
-    margin-top: 22px;
-    margin-left: -@base;
-    font-size: 25px;
-  }
-  label.disable::after {
-    color: @gray;
-  }
-}
   section.blogger-list {
     margin-top: 25px;
     h3 {
@@ -627,6 +651,317 @@ body.kol-list {
     }
   }
 }
-
 // PxPerfect: 232: 340
 // PxPerfect: 232: 284
+body.invoice-deposit-1 {
+  @blue: #0D98E8;
+  @green: #4EA1A7;
+  a {
+    text-decoration: none;
+  }
+  .bg-white {
+    background-color: @white;
+  }
+  .my-container {
+    width: 1210px;
+    margin-bottom: 30px;
+  }
+  .images-wrapper {
+    margin-top: 10px;
+    .past-post-img {
+      margin-top: 10px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .past-post-img:nth-child(3n-1) {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  }
+  .social {
+    .inline-block();
+    &.weibo {
+      background: url(../images/weibo_stats.png);
+      height: 13px;
+      width: 15px;
+    }
+    &.wechat {
+      background: url(../images/wechat_stats.png);
+      height: 13px;
+      width: 15px;
+    }
+    &.nice {
+      background: url(../images/nice_stats.png);
+      height: 12px;
+      width: 11px;
+    }
+    &.instagram {
+      background: url(../images/instagram_stats.png);
+      height: 12px;
+      width: 12px;
+    }
+    &.facebook {
+      background: url(../images/facebook_icon.png);
+      height: 12px;
+      width: 6px;
+    }
+  }
+  .outer-padding {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .inner-padding {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .tag {
+      margin-top: 10px;
+      padding: 2px;
+      min-width: 55px;
+      min-height: 25px;
+    &.left {
+      border: 1px solid @blue;
+    }
+    &.right {
+      margin-left: 5px;
+      border: 1px solid @green;
+    }
+  }
+  hr.section-bar {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid @gray;
+  }
+  section.hero {
+    margin-top: 20px;
+    background: @gray-light;
+    padding: 20px 40px 0px 40px;
+    min-height: 150px;
+    article {
+      &.description-container {
+        h3 {
+          margin-top: 20px;
+          margin-bottom: 0px;
+        }
+        h1 {
+          margin-top: 5px;
+        }
+        p.description {
+          margin: 20px 0px;
+          span {
+            font-size: 14px;
+            &:not(.first) {
+              margin-left: 20px;
+            }
+          }
+        }
+        a.content-switch-arrow {
+          top: -8px;
+          padding: 10px;
+          float: right;
+          right: -10px;
+          position: relative;
+        }
+      }
+      &.joined-bloggers-container {
+        .section-bar {
+          margin-top: 0px;
+        }
+        .joined-bloggers-inner-container {
+          margin-top: 25px;
+
+          // 1. Joined blogger
+          .blogger-wrapper {
+            margin-top: 5px;
+            display: inline-block;
+            &.first {
+              margin-right: 2.5px; // Dirty script
+            }
+            &:not(.first) {
+              margin-left: 15px;
+
+            }
+            .img-wrapper {
+              max-height: 140px;
+              max-width: 140px;
+              overflow: hidden;
+              position: relative;
+              background-image: url(../images/top-section/kol_profile_img.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+              height: 140px;
+              width: 140px;
+              div.img-delete {
+                display: none;
+                right: 10px;
+                top: 10px;
+                height: 25px;
+                width: 25px;
+                cursor: pointer;
+                background: url(../images/top-section/delete_button.png) no-repeat;
+              }
+              &:hover {
+                div.img-delete {
+                  display: block;
+                }
+              }
+            }
+            h3 {
+              margin-bottom: 5px;
+            }
+            .status-bar-wrapper {
+              .status-bar {
+                margin-top: 5px;
+                height: 5px;
+                width: 33.33%;
+                float: left;
+                &.empty {
+                  background-color: @gray;
+                }
+                &.yellow {
+                  background-color: @yellow;
+                }
+                &.pink {
+                  background-color: @pink;
+                }
+                &.green {
+                  background-color: @green;
+                }
+              }
+            }
+          }
+          // 2. Data summary
+          .sprite {
+            float: left;
+            margin-right: 5px;
+            width: 19px;
+            height: 15px;
+            &.weibo-on {
+              background: url(../images/top-section/weibo_logo_red.png) no-repeat;
+            }
+            &.weibo-off {
+              background: url(../images/top-section/weibo_logo_grey.png) no-repeat;
+            }
+            &.wechat-on {
+              background: url(../images/top-section/wechat_logo_green.png) no-repeat;
+            }
+            &.wechat-off {
+              background: url(../images/top-section/wechat_logo_grey.png) no-repeat;
+            }
+          }
+          p {
+            color: @gray;
+          }
+        }
+
+      }
+      .fans-data-container {
+        padding-bottom: 40px;
+        .section-bar {
+          margin-top: 10px;
+        }
+        h3 {
+          margin-top: 15px;
+          margin-bottom: 10px;
+        }
+        .data-wrapper {
+          margin-right: 50px;
+        }
+        .total-tally {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+  button {
+    margin-top: 20px;
+    font-size: 18px;
+    color: @white-bg;
+    background-color: @black;
+    padding: 20px 0px 15px 0px;
+    min-width: 180px
+  }
+  button.style-gray {
+    background-color: @gray;
+    &:hover {
+      background-color: @gray-lighter;
+    }
+    &:active {
+      background-color: #5A6064;
+    }
+  }
+  button.style-black {
+    background-color: @black;
+    &:hover {
+      background-color: @black-lighter;
+    }
+    &:active {
+      background-color: @black-dark;
+    }
+  }
+
+  button.edit-cooperation {
+    top: 0px;
+    right: 0px;
+    margin-top: -20px;
+    margin-right: -20px;
+    font-size: 15px;
+    min-width: 150px;
+  }
+
+  .description-container {
+    position: relative;
+  }
+  .button-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-width: 630px;
+    button {
+      width: 300px;
+      font-size: 20px;
+      padding-top: 25px;
+      padding-bottom: 30px;
+      &.confirm {
+        margin-right: 20px;
+      }
+    }
+  }
+  section.invoice-detail {
+    margin-top: 50px;
+    font-size: 13px;
+    hr {
+      border-bottom: 1px solid @gray;
+    }
+    .font-small {
+      font-size: 10px;
+    }
+    .content-container {
+
+    }
+    .second.title-container {
+      margin-top: 25px;
+    }
+    .second.content-container {
+      margin-top: 5px;
+      &.sub {
+        margin-top: 30px;
+        padding-bottom: 10px;
+        ul {
+          font-size: 10px;
+          line-height: 23px;
+        }
+      }
+    }
+    .summary-number {
+      font-size: 18px;
+    }
+    .bank-info-container {
+      font-size: 10px;
+    }
+  }
+}
+
+
+
+// Pix Perfect: 170 | 0
+// Pix Perfect: 170 | -10
