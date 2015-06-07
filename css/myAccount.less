@@ -163,6 +163,10 @@ color:#333;
   margin-top: 80px;
   width: 1190px;
   padding-left: 10px;
+
+  &.withSectionBar {
+    margin-top: 20px;
+  }
 }
 
 #main>.col-xs-9 {
@@ -335,4 +339,39 @@ textarea {
   background-color: @gray-light;
   border: none;
   resize: none;
+}
+
+section.step-bar {
+  margin-top: 110px;
+  font-size: 14px;
+  border: 1px solid @gray;
+  border-radius: 50px;
+  .col-md-15 {
+    padding: 0px;
+    a {
+      color: @black;
+      &:hover {
+        text-decoration: none;
+      }
+      div {
+        border-radius: 20px;
+        padding: 10px;
+        position: relative;
+        background-color: transparent;
+        &.active, &.active:hover {
+          cursor: text;
+          color: @white-bg;
+          background-color: @black;
+        }
+        &:hover {
+          color: @black;
+          background-color: @gray-light;
+        }
+        &:active {
+          color: @black;
+          background-color: @gray;
+        }
+      }
+    }
+  }
 }
