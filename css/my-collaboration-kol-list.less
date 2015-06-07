@@ -1,0 +1,632 @@
+/*
+- Table of content -
+
+ =Debug
+ =Import
+ =To be move
+ =Step 3
+  (PerfectPixel: 140 / 3)
+-------------------------------------------------- */
+
+
+/* =Debug
+-------------------------------------------------- */
+/* section {
+  .debug();
+}
+article {
+  .debug2();
+} */
+
+.debug {
+  border: 1px solid red;
+}
+.debug2 {
+  border: 1px solid green;
+}
+.debug3 {
+  border: 1px solid blue;
+}
+.debugbg {
+  background-color: pink;
+}
+
+/*  =Import
+-------------------------------------------------- */
+@import "main.less";
+
+
+/*  =To be move
+-------------------------------------------------- */
+.transparent-top-border {
+  // For sorting dropdown
+  border-top: 1px solid transparent!important;
+}
+
+/*  =Step 3
+    Pixl perfect Ref: Step-3_Full.png | x150 : y0
+-------------------------------------------------- */
+body.steps {
+  section.step-bar {
+    margin-top: 110px;
+    font-size: 14px;
+    border: 1px solid @gray;
+    border-radius: 50px;
+    .col-md-15 {
+      padding: 0px;
+      a {
+        color: @black;
+        &:hover {
+          text-decoration: none;
+        }
+        div {
+          border-radius: 20px;
+          padding: 10px;
+          position: relative;
+          background-color: transparent;
+          &.active, &.active:hover {
+            cursor: text;
+            color: @white-bg;
+            background-color: @black;
+          }
+          &:hover {
+            color: @black;
+            background-color: @gray-light;
+          }
+          &:active {
+            color: @black;
+            background-color: @gray;
+          }
+        }
+      }
+    }
+  }
+}
+body.kol-list {
+  @blue: #0D98E8;
+  @green: #4EA1A7;
+  a {
+    text-decoration: none;
+  }
+  .bg-white {
+    background-color: @white;
+  }
+  .my-container {
+    width: 1210px;
+    margin-bottom: 30px;
+  }
+  .images-wrapper {
+    margin-top: 10px;
+    .past-post-img {
+      margin-top: 10px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .past-post-img:nth-child(3n-1) {
+      margin-left: 7px;
+      margin-right: 7px;
+    }
+  }
+  .social {
+    .inline-block();
+    &.weibo {
+      background: url(../images/weibo_stats.png);
+      height: 13px;
+      width: 15px;
+    }
+    &.wechat {
+      background: url(../images/wechat_stats.png);
+      height: 13px;
+      width: 15px;
+    }
+    &.nice {
+      background: url(../images/nice_stats.png);
+      height: 12px;
+      width: 11px;
+    }
+    &.instagram {
+      background: url(../images/instagram_stats.png);
+      height: 12px;
+      width: 12px;
+    }
+    &.facebook {
+      background: url(../images/facebook_icon.png);
+      height: 12px;
+      width: 6px;
+    }
+  }
+  .outer-padding {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .inner-padding {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .tag {
+      margin-top: 10px;
+      padding: 2px;
+      min-width: 55px;
+      min-height: 25px;
+    &.left {
+      border: 1px solid @blue;
+    }
+    &.right {
+      margin-left: 5px;
+      border: 1px solid @green;
+    }
+  }
+  hr.section-bar {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid @gray;
+  }
+	section.hero {
+		margin-top: 20px;
+		background: @gray-light;
+		padding: 20px 40px 0px 40px;
+		min-height: 150px;
+    article {
+      &.description-container {
+        h3 {
+          margin-top: 20px;
+          margin-bottom: 0px;
+        }
+        h1 {
+          margin-top: 5px;
+        }
+        p.description {
+          margin: 20px 0px;
+          span {
+            font-size: 14px;
+            &:not(.first) {
+              margin-left: 20px;
+            }
+          }
+        }
+        a.content-switch-arrow {
+          top: -8px;
+          padding: 10px;
+          float: right;
+          right: -10px;
+          position: relative;
+        }
+      }
+      &.joined-bloggers-container {
+        .section-bar {
+          margin-top: 0px;
+        }
+        .joined-bloggers-inner-container {
+          margin-top: 25px;
+
+          // 1. Joined blogger
+          .blogger-wrapper {
+            margin-top: 5px;
+            display: inline-block;
+            &.first {
+              margin-right: 2.5px; // Dirty script
+            }
+            &:not(.first) {
+              margin-left: 15px;
+
+            }
+            .img-wrapper {
+              max-height: 140px;
+              max-width: 140px;
+              overflow: hidden;
+              position: relative;
+              background-image: url(../images/top-section/kol_profile_img.png);
+              background-repeat: no-repeat;
+              background-size: cover;
+              height: 140px;
+              width: 140px;
+              div.img-delete {
+                display: none;
+                right: 10px;
+                top: 10px;
+                height: 25px;
+                width: 25px;
+                cursor: pointer;
+                background: url(../images/top-section/delete_button.png) no-repeat;
+              }
+              &:hover {
+                div.img-delete {
+                  display: block;
+                }
+              }
+            }
+            h3 {
+              margin-bottom: 5px;
+            }
+            .status-bar-wrapper {
+              .status-bar {
+                margin-top: 5px;
+                height: 5px;
+                width: 33.33%;
+                float: left;
+                &.empty {
+                  background-color: @gray;
+                }
+                &.yellow {
+                  background-color: @yellow;
+                }
+                &.pink {
+                  background-color: @pink;
+                }
+                &.green {
+                  background-color: @green;
+                }
+              }
+            }
+          }
+          // 2. Data summary
+          .sprite {
+            float: left;
+            margin-right: 5px;
+            width: 19px;
+            height: 15px;
+            &.weibo-on {
+              background: url(../images/top-section/weibo_logo_red.png) no-repeat;
+            }
+            &.weibo-off {
+              background: url(../images/top-section/weibo_logo_grey.png) no-repeat;
+            }
+            &.wechat-on {
+              background: url(../images/top-section/wechat_logo_green.png) no-repeat;
+            }
+            &.wechat-off {
+              background: url(../images/top-section/wechat_logo_grey.png) no-repeat;
+            }
+          }
+          p {
+            color: @gray;
+          }
+        }
+
+      }
+      .fans-data-container {
+        padding-bottom: 40px;
+        .section-bar {
+          margin-top: 10px;
+        }
+        h3 {
+          margin-top: 15px;
+          margin-bottom: 10px;
+        }
+        .data-wrapper {
+          margin-right: 50px;
+        }
+        .total-tally {
+          margin-left: 30px;
+        }
+      }
+    }
+	}
+  button {
+    margin-top: 20px;
+    font-size: 18px;
+    color: @white-bg;
+    background-color: @black;
+    padding: 20px 0px 15px 0px;
+    min-width: 180px
+  }
+.checkbox {
+  @base: 25px;
+  margin-left: 0px;
+  // Tick box
+  label::before {
+    margin-top: 25px;
+    margin-left: -@base;
+    height: 30px;
+    width: 30px;
+    border: 2px solid @black;
+    border-radius: 0px;
+  }
+  label.disable::before {
+    border: 2px solid @gray;
+  }
+  // Tick
+  label::after {
+    margin-top: 22px;
+    margin-left: -@base;
+    font-size: 25px;
+  }
+  label.disable::after {
+    color: @gray;
+  }
+}
+  section.blogger-list {
+    margin-top: 25px;
+    h3 {
+      font-size: 20px;
+    }
+    .dropdown {
+      button {
+        font-size: 16px;
+        text-align: right;
+        color: @black;
+        background-color: transparent;
+        padding: 0px;
+        border: none;
+        &:active {
+          box-shadow: none!important;
+          outline: none!important;
+        }
+        .img-arrow {
+          height: 16px;
+          width: 14px;
+          margin-left: 10px;
+          background: url(../images/style4_arrow.png) no-repeat 0px 5px;
+          top: 3px;
+          position: relative;
+        }
+      }
+      ul.dropdown-menu {
+        box-shadow: none;
+        border: none;
+        background-color: @white-bg;
+        padding: 0px;
+        li {
+          a:hover {
+            background: @gray-light;
+          }
+          a:active {
+            background: @gray;
+          }
+          a {
+            margin: 0px auto 0px auto;
+            padding: 5px 10px;
+          }
+          &:not(:first-child) {
+            a {
+              border-top: 1px solid @gray;
+            }
+          }
+          &:not(:first-child):hover {
+            a {
+              border-top: 1px solid @gray-light;
+            }
+          }
+        }
+      }
+    }
+    h4 {
+      margin-top: 5px;
+    }
+    hr.section-bar {
+      margin-top: 5px;
+    }
+    .blogger-list-container {
+      article{
+        &.first {
+          margin-top: 10px;
+        }
+        margin-top: 15px;
+
+        .blogger-wrapper {
+          background-color: @white-bg;
+          padding: 20px;
+          max-width: 380px;
+          .number-4 {
+            font-size: 20px;
+          }
+          .blogger-inner-wrapper {
+            hr {
+              border-top: 1px solid @gray-light;
+              max-width: 345px;
+            }
+
+            .header-wrapper {
+              .img-wrapper {
+                background-size: cover;
+                background-repeat: no-repeat;
+                height: 82px;
+                width: 82px;
+              }
+              .header-content {
+                padding-left: 20px;
+                .sub-title {
+                  margin-top: 5px;
+                }
+              // tag
+              }
+            }
+            .past-post-row {
+              a {
+                top: 5px;
+                position: relative;
+              }
+            }
+            .past-post-wrapper {
+              h2 {
+                margin-top: 25px;
+                font-size: 20px;
+              }
+              p {
+                font-size: 17px;
+              }
+              // .images-wrapper (at top)
+              .past-post-img {
+                height: 108px;
+                width: 108px;
+              }
+              .more {
+                margin-top: 15px;
+                a {
+                  color: @black;
+                  text-decoration: underline;
+                }
+              }
+            }
+            .social-wrapper {
+              font-size: 15px;
+              .social {
+                display: inline-block;
+                margin-left: 5px;
+                top: 5px;
+                position: relative;
+                &.weibo {
+                  width: 25px;
+                  height: 20px;
+                  background: url(../images/bottom-section/weibo_bot_grey.png);
+                }
+                &.wechat {
+                  width: 25px;
+                  height: 21px;
+                  background: url(../images/bottom-section/wechat_bot_grey.png);
+                }
+                &.nice {
+                  width: 25px;
+                  height: 21px;
+                  background: url(../images/bottom-section/nice_bot_grey.png);
+                }
+              }
+              span {
+                margin-left: 5px;
+              }
+            }
+            .caret-right {
+              border-right: 1px solid @gray;
+            }
+            .option-wrapper {
+              &.left {
+                max-width: 150px;
+              }
+              &.package {
+                .checkbox {
+                  margin-right: -1px; // Adjustment
+                }
+              }
+              .title {
+                font-size: 18px;
+              }
+              .sub-title {
+                font-size: 13px;
+              }
+              .price {
+                font-size: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modal-container {
+    .modal-dialog {
+      width: 1200px;
+      .img-cross {
+        background-image: url(../images/modal/close_btn.png);
+        background-repeat: no-repeat;
+        height: 39px;
+        width: 39px;
+        right: 25px;
+        top: 25px;
+      }
+      .modal-content {
+        background-color: @white-bg;
+        margin-top: 80px;
+        border: 10px solid @black;
+        border-radius: 0px;
+        .my-container {
+          margin-top: 75px;
+          width: 1050px;
+          .header-wrapper {
+            padding-bottom: 35px;
+            .left-container {
+              .img-wrapper {
+                height: 180px;
+                width: 180px;
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+              .social-wrapper {
+                .social {
+                    height: 19px;
+                    width: 23px;
+                    background-repeat: no-repeat;
+                  &.weibo {
+                    background-image: url(../images/modal/weibo_icon.png);
+                  }
+                  &.wechat {
+                    background-image: url(../images/modal/wechat_icon.png);
+                  }
+                }
+                .title {
+                  margin-top: 15px;
+                  span {
+                    font-size: 16px;
+                  }
+                }
+                .checkbox {
+                  label::before {
+                    margin-top: -5px;
+                  }
+                  label::after {
+                    margin-top: -7px;
+                  }
+                }
+              }
+            }
+            .right-container {
+              width: 835px;
+              padding-left: 40px;
+              .title {
+                font-size: 24px;
+              }
+              .sub-title {
+                font-size: 15px;
+              }
+              .tag {
+                padding: 2px; // over ride
+              }
+              p {
+                margin-top: 20px;
+                line-height: 22px;
+              }
+              .data-wrapper {
+                margin-right: 50px;
+              }
+              .hashtag-wrapper {
+                margin-top: 15px;
+                .hashtag {
+                  color: @white-bg;
+                  background-color: @black-light;
+                  padding: 3px 13px;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+          .body-wrapper {
+            article.blog-wrapper {
+              margin-top: 15px;
+              background-color: @white;
+              padding: 10px;
+              .social-wrapper {
+                margin-right: 5px;
+              }
+              h2 {
+                margin-top: 10px;
+                margin-bottom: 5px;
+              }
+              p {
+              }
+            }
+            .images-wrapper {
+              margin-top: 0px;
+              .past-post-img {
+                height: 97px;
+                width: 97px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// PxPerfect: 232: 340
+// PxPerfect: 232: 284

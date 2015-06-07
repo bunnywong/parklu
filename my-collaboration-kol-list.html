@@ -1,0 +1,1256 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1200, initial-scale=1">
+    <title>parkLU</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/my-collaboration-kol-list.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv-3.7.2.min.js"></script>
+    <script src="js/respond-1.4.2.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="kol-list steps">
+
+    <nav class="navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="col-xs-10">
+          <div class="navItem brandName"></div>
+          <div class="navItem navMenu">仪表盘</div>
+          <div class="navItem navMenu current">合作</div>
+        </div>
+        <div id="navbarTopRight" class="col-xs-2 text-right">
+          <div id="navbarAvatar" style="background-image: url(images/profile/image.png);"></div>
+          <span class="subMenuSet js-sub-menu">
+            <div class="navItem">我的账户</div>
+            <div class="text-left dropdown-menu">
+              <div>關於我們公司</div>
+              <div>登入設定</div>
+              <div>發票設置</div>
+              <div>登出</div>
+            </div>
+            <div class="navItem arrow"></div>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="container my-container">
+        <section class="step-bar">
+          <div class="row text-center">
+            <div class="col-lg-12">
+              <div class="col-md-15 col-sm-3">
+                <a href="#">
+                  <div class="">合作细节</div>
+                </a>
+              </div>
+              <div class="col-md-15 col-sm-3">
+                <a href="#">
+                  <div>初始保证金</div>
+                </a>
+              </div>
+              <div class="col-md-15 col-sm-3">
+                <a href="#">
+                  <div class="active">关键意见领袖名单</div>
+                </a>
+              </div>
+              <div class="col-md-15 col-sm-3">
+                <a href="#">
+                  <div>确认合作</div>
+                </a>
+              </div>
+              <div class="col-md-15 col-sm-3">
+                <a href="#">
+                  <div>第二个交易</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="hero">
+          <article class="description-container">
+            <h3>
+              <span>增加销售，提高知名度</span>
+              <a class="content-switch-arrow js-content-switch-arrow" data-toggle="collapse" href="#joined-bloggers-container" aria-expanded="false" aria-controls="hidden-content" data-group="joined-bloggers-container">
+                <div class="sprite ico-closed js-arrow"></div>
+              </a>
+            </h3>
+            <h1>谁说长大後就不能和好朋友住在一起？</h1>
+            <p class="description">
+              <span class="first">粉絲抽獎活動</span>
+              <span>2015年5月15日 - 30日</span>
+              <span>博客人数：8</span>
+              <span>价钱：¥2000,000/¥3000,000</span>
+            </p>
+          </article>
+
+          <article class="collapse DEBUG-in js-collapse joined-bloggers-container" id="joined-bloggers-container" data-group="joined-bloggers-container">
+            <hr class="section-bar">
+            <h3>参与博客（请选择 最少15个博客）</h3>
+
+            <div class="joined-bloggers-inner-container">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="blogger-wrapper first">
+                    <div class="img-wrapper">
+                      <div class="img-delete absolute js-delete-joined-blogger"></div>
+                    </div>
+                    <div class="status-bar-wrapper">
+                      <div class="status-bar empty"></div>
+                      <div class="status-bar green"></div>
+                      <div class="status-bar pink"></div>
+                    </div>
+                    <h3>黃小花</h3>
+                    <div>
+                      <div class="sprite weibo-on"></div>
+                      <div class="sprite wechat-off"></div>
+                      <p>¥15,000</p>
+                    </div>
+                  </div>
+
+                  <div class="blogger-wrapper">
+                    <div class="img-wrapper">
+                      <div class="img-delete absolute js-delete-joined-blogger"></div>
+                    </div>
+                    <div class="status-bar-wrapper">
+                      <div class="status-bar yellow"></div>
+                      <div class="status-bar green"></div>
+                      <div class="status-bar empty"></div>
+                    </div>
+                    <h3>黃小花</h3>
+                    <div>
+                      <div class="sprite weibo-on"></div>
+                      <div class="sprite wechat-off"></div>
+                      <p>¥15,000</p>
+                    </div>
+                  </div>
+
+                  <div class="blogger-wrapper">
+                    <div class="img-wrapper">
+                      <div class="img-delete absolute js-delete-joined-blogger"></div>
+                    </div>
+                    <div class="status-bar-wrapper">
+                      <div class="status-bar yellow"></div>
+                      <div class="status-bar empty"></div>
+                      <div class="status-bar pink"></div>
+                    </div>
+                    <h3>黃小花</h3>
+                    <div>
+                      <div class="sprite weibo-off"></div>
+                      <div class="sprite wechat-on"></div>
+                      <p>¥15,000</p>
+                    </div>
+                  </div>
+
+                  <div class="blogger-wrapper">
+                    <div class="img-wrapper">
+                      <div class="img-delete absolute js-delete-joined-blogger"></div>
+                    </div>
+                    <div class="status-bar-wrapper">
+                      <div class="status-bar yellow"></div>
+                      <div class="status-bar empty"></div>
+                      <div class="status-bar pink"></div>
+                    </div>
+                    <h3>黃小花</h3>
+                    <div>
+                      <div class="sprite weibo-off"></div>
+                      <div class="sprite wechat-on"></div>
+                      <p>¥15,000</p>
+                    </div>
+                  </div>
+
+                  <div class="blogger-wrapper">
+                    <div class="img-wrapper">
+                      <div class="img-delete absolute js-delete-joined-blogger"></div>
+                    </div>
+                    <div class="status-bar-wrapper">
+                      <div class="status-bar yellow"></div>
+                      <div class="status-bar empty"></div>
+                      <div class="status-bar pink"></div>
+                    </div>
+                    <h3>黃小花</h3>
+                    <div>
+                      <div class="sprite weibo-on"></div>
+                      <div class="sprite wechat-on"></div>
+                      <p>¥15,000</p>
+                    </div>
+                  </div>
+
+                  <div class="blogger-wrapper">
+                    <div class="img-wrapper">
+                      <div class="img-delete absolute js-delete-joined-blogger"></div>
+                    </div>
+                    <div class="status-bar-wrapper">
+                      <div class="status-bar yellow"></div>
+                      <div class="status-bar empty"></div>
+                      <div class="status-bar pink"></div>
+                    </div>
+                    <h3>黃小花</h3>
+                    <div>
+                      <div class="sprite weibo-on"></div>
+                      <div class="sprite wechat-on"></div>
+                      <p>¥15,000</p>
+                    </div>
+                  </div>
+
+                  <div class="blogger-wrapper">
+                    <div class="img-wrapper">
+                      <div class="img-delete absolute js-delete-joined-blogger"></div>
+                    </div>
+                    <div class="status-bar-wrapper">
+                      <div class="status-bar yellow"></div>
+                      <div class="status-bar empty"></div>
+                      <div class="status-bar pink"></div>
+                    </div>
+                    <h3>黃小花</h3>
+                    <div>
+                      <div class="sprite weibo-off"></div>
+                      <div class="sprite wechat-off"></div>
+                      <p>¥15,000</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <div class="blogger-wrapper first">
+                    <div class="img-wrapper">
+                      <div class="img-delete absolute js-delete-joined-blogger"></div>
+                    </div>
+                    <div class="status-bar-wrapper">
+                      <div class="status-bar empty"></div>
+                      <div class="status-bar green"></div>
+                      <div class="status-bar pink"></div>
+                    </div>
+                    <h3>黃小花</h3>
+                    <div>
+                      <div class="sprite weibo-on"></div>
+                      <div class="sprite wechat-off"></div>
+                      <p>¥15,000</p>
+                    </div>
+                  </div>
+
+                  <div class="blogger-wrapper">
+                    <div class="img-wrapper">
+                      <div class="img-delete absolute js-delete-joined-blogger"></div>
+                    </div>
+                    <div class="status-bar-wrapper">
+                      <div class="status-bar yellow"></div>
+                      <div class="status-bar empty"></div>
+                      <div class="status-bar pink"></div>
+                    </div>
+                    <h3>黃小花</h3>
+                    <div>
+                      <div class="sprite weibo-on"></div>
+                      <div class="sprite wechat-on"></div>
+                      <p>¥15,000</p>
+                    </div>
+                  </div>
+
+                  <div class="blogger-wrapper">
+                    <div class="img-wrapper">
+                      <div class="img-delete absolute js-delete-joined-blogger"></div>
+                    </div>
+                    <div class="status-bar-wrapper">
+                      <div class="status-bar yellow"></div>
+                      <div class="status-bar empty"></div>
+                      <div class="status-bar pink"></div>
+                    </div>
+                    <h3>黃小花</h3>
+                    <div>
+                      <div class="sprite weibo-on"></div>
+                      <div class="sprite wechat-on"></div>
+                      <p>¥15,000</p>
+                    </div>
+                  </div>
+
+                  <div class="blogger-wrapper">
+                    <div class="img-wrapper">
+                      <div class="img-delete absolute js-delete-joined-blogger"></div>
+                    </div>
+                    <div class="status-bar-wrapper">
+                      <div class="status-bar yellow"></div>
+                      <div class="status-bar empty"></div>
+                      <div class="status-bar pink"></div>
+                    </div>
+                    <h3>黃小花</h3>
+                    <div>
+                      <div class="sprite weibo-off"></div>
+                      <div class="sprite wechat-off"></div>
+                      <p>¥15,000</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fans-data-container">
+              <hr class="section-bar">
+              <div class="row">
+                <div class="col-lg-8 ">
+                  <h3>参与数据</h3>
+
+                  <div class="data-wrapper pull-left">
+                    <div class="number-3">4,456k</div>
+                    <div class="weibo social"></div>
+                    <span>微博粉絲</span>
+                  </div>
+
+                  <div class="data-wrapper pull-left">
+                    <div class="number-3">1,090k</div>
+                    <span class="wechat social"></span>
+                    <span>微信观看人次</span>
+                  </div>
+
+                  <div class="data-wrapper pull-left">
+                    <div class="number-3">256k</div>
+                    <span class="nice social"></span>
+                    <span>粉絲</span>
+                  </div>
+
+                  <div class="data-wrapper pull-left">
+                    <div class="number-3">1,090k</div>
+                    <span class="instagram social"></span>
+                    <span>Instagram 粉絲</span>
+                  </div>
+
+                  <div class="data-wrapper pull-left">
+                    <div class="number-3">256k</div>
+                    <span class="facebook social"></span>
+                    <span>Facebook 粉絲</span>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="total-tally">
+                    <h3>总价</h3>
+                    <div class="number-3">¥200,000/¥300,000</div>
+                    <small>Total Tally</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <button class="center-block save js-save">储存</button>
+
+        <section class="blogger-list">
+          <div class="row">
+            <div class="col-lg-6">
+              <h3>博客名单</h3>
+            </div>
+            <div class="col-lg-6">
+              <div class="dropdown pull-right sort">
+                <button class="btn btn-default dropdown-toggle text-right" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                  排序方式
+                  <div class="img img-arrow inline-block"></div>
+                </button>
+                <ul class="dropdown-menu js-ul-dropdown-sort" role="menu" aria-labelledby="dropdownMenu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">relevancy(default)</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span>reach high to low</span></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span>price high to low</span></a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><span>price low to high</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <hr class="section-bar">
+
+          <div class="blogger-list-container">
+            <div class="row outer-padding">
+              <div class="col-lg-4 inner-padding">
+                <article class="first">
+                  <div class="blogger-wrapper">
+                    <div class="blogger-inner-wrapper">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="header-wrapper">
+                            <div class="img-wrapper pointer pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"  data-toggle="modal" data-target=".modal-container">
+                            </div>
+                            <div class="header-content pull-left">
+                              <div class="title pointer" data-toggle="modal" data-target=".modal-container">黃小花</div>
+                              <div class="sub-title font-gray">中國上海</div>
+                              <div class="tag left inline-block text-center">生活</div>
+                              <div class="tag right inline-block text-center">时装</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <div class="social weibo"></div>
+                            <span>微博粉丝</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <span class="social wechat"></span>
+                            <span>微信观看人次</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <span class="social nice"></span>
+                            <span>Nice粉丝</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-12">
+                          <div class="past-post-row">
+                            <span class="past-post">Past Post</span>
+                            <span class="pull-right">
+                               <a class="content-switch-arrow js-content-switch-arrow" data-toggle="collapse" href="#past-post-1" aria-expanded="false" aria-controls="hidden-content" data-group="past-post-1">
+                                <div class="sprite ico-closed js-arrow"></div>
+                              </a>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="collapse js-collapse past-post-wrapper" id="past-post-1" data-group="past-post-1">
+                            <h2>谁说长大后不能和好朋友住在一起?</h2>
+                            <p>(u3s aute 3rure .o5or 3n re9re2en.er3t 3n vo5u9tate ve53t esse c355u6 .o5ore eu 0u13at nu55a 9ar3atur. )xce9teur s3nt occaecat cu93.atat non 9ro3.ent, sunt 3n cu59a qu3 o003c3a .eserunt 6o553t an36 3. est 5a,oru6.</p>
+
+                            <div class="images-wrapper center-block">
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="more"><a href="#">更多</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6 caret-right">
+                          <div class="option-wrapper left">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">微博</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥3,000</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox pull-right">
+                                  <input id="weibo-1" class="styled js-checkbox" type="checkbox"  data-group="1" data-type="child" data-name="weibo">
+                                  <label for="weibo-1"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <div class="option-wrapper right">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">微信</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥3,000</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox  pull-right">
+                                  <input id="wechat-1" class="styled js-checkbox" type="checkbox"  data-group="1" data-type="child" data-name="wechat">
+                                  <label for="wechat-1"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <hr>
+
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="option-wrapper package">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">套餐 (微博和微信)</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥5,500</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox pull-right">
+                                  <input id="package-1" class="styled js-checkbox" type="checkbox" data-group="1" data-name="package" data-type="parent">
+                                  <label for="package-1"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </article>
+                <article>
+                  <div class="blogger-wrapper">
+                    <div class="blogger-inner-wrapper">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="header-wrapper">
+                            <div class="img-wrapper pointer pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"  data-toggle="modal" data-target=".modal-container">
+                            </div>
+                            <div class="header-content pull-left">
+                              <div class="title pointer" data-toggle="modal" data-target=".modal-container">黃小花</div>
+                              <div class="sub-title font-gray">中國上海</div>
+                              <div class="tag left inline-block text-center">生活</div>
+                              <div class="tag right inline-block text-center">时装</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <div class="social weibo"></div>
+                            <span>微博粉丝</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <span class="social wechat"></span>
+                            <span>微信观看人次</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <span class="social nice"></span>
+                            <span>Nice粉丝</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-12">
+                          <div class="past-post-row">
+                            <span class="past-post">Past Post</span>
+                            <span class="img pull-right">
+                               <a class="content-switch-arrow js-content-switch-arrow" data-toggle="collapse" href="#past-post-12" aria-expanded="false" aria-controls="hidden-content" data-group="past-post-12">
+                                <div class="sprite ico-closed js-arrow"></div>
+                              </a>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="collapse js-collapse past-post-wrapper" id="past-post-12" data-group="past-post-12">
+                            <h2>谁说长大后不能和好朋友住在一起?</h2>
+                            <p>(u3s aute 3rure .o5or 3n re9re2en.er3t 3n vo5u9tate ve53t esse c355u6 .o5ore eu 0u13at nu55a 9ar3atur. )xce9teur s3nt occaecat cu93.atat non 9ro3.ent, sunt 3n cu59a qu3 o003c3a .eserunt 6o553t an36 3. est 5a,oru6.</p>
+
+                            <div class="images-wrapper center-block">
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="more"><a href="#">更多</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6 caret-right">
+                          <div class="option-wrapper left">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">微博</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥3,000</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox pull-right">
+                                  <input id="weibo-12" class="styled js-checkbox" type="checkbox"  data-group="12" data-type="child" data-name="weibo">
+                                  <label for="weibo-12"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <div class="option-wrapper right">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">微信</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥3,000</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox  pull-right">
+                                  <input id="wechat-12" class="styled js-checkbox" type="checkbox"  data-group="12" data-type="child" data-name="wechat">
+                                  <label for="wechat-12"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <hr>
+
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="option-wrapper package">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">套餐 (微博和微信)</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥5,500</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox pull-right">
+                                  <input id="package-12" class="styled js-checkbox" type="checkbox" data-group="12" data-name="package" data-type="parent">
+                                  <label for="package-12"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+              <div class="col-lg-4 inner-padding">
+                <article class="first">
+                  <div class="blogger-wrapper">
+                    <div class="blogger-inner-wrapper">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="header-wrapper">
+                            <div class="img-wrapper pointer pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"  data-toggle="modal" data-target=".modal-container">
+                            </div>
+                            <div class="header-content pull-left">
+                              <div class="title pointer" data-toggle="modal" data-target=".modal-container">黃小花</div>
+                              <div class="sub-title font-gray">中國上海</div>
+                              <div class="tag left inline-block text-center">生活</div>
+                              <div class="tag right inline-block text-center">时装</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <div class="social weibo"></div>
+                            <span>微博粉丝</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <span class="social wechat"></span>
+                            <span>微信观看人次</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <span class="social nice"></span>
+                            <span>Nice粉丝</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-12">
+                          <div class="past-post-row">
+                            <span class="past-post">Past Post</span>
+                            <span class="img pull-right">
+                               <a class="content-switch-arrow js-content-switch-arrow" data-toggle="collapse" href="#past-post-2" aria-expanded="false" aria-controls="hidden-content" data-group="past-post-2">
+                                <div class="sprite ico-closed js-arrow"></div>
+                              </a>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="collapse js-collapse past-post-wrapper" id="past-post-2" data-group="past-post-2">
+                            <h2>谁说长大后不能和好朋友住在一起?</h2>
+                            <p>(u3s aute 3rure .o5or 3n re9re2en.er3t 3n vo5u9tate ve53t esse c355u6 .o5ore eu 0u13at nu55a 9ar3atur. )xce9teur s3nt occaecat cu93.atat non 9ro3.ent, sunt 3n cu59a qu3 o003c3a .eserunt 6o553t an36 3. est 5a,oru6.</p>
+
+                            <div class="images-wrapper center-block">
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="more"><a href="#">更多</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6 caret-right">
+                          <div class="option-wrapper left">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">微博</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥3,000</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox pull-right">
+                                  <input id="weibo-2" class="styled js-checkbox" type="checkbox"  data-group="2" data-type="child" data-name="weibo">
+                                  <label for="weibo-2"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <div class="option-wrapper right">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">微信</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥3,000</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox  pull-right">
+                                  <input id="wechat-2" class="styled js-checkbox" type="checkbox"  data-group="2" data-type="child" data-name="wechat">
+                                  <label for="wechat-2"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <hr>
+
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="option-wrapper package">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">套餐 (微博和微信)</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥5,500</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox pull-right">
+                                  <input id="package-2" class="styled js-checkbox" type="checkbox" data-group="2" data-name="package" data-type="parent">
+                                  <label for="package-2"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-lg-4 inner-padding">
+                <article class="first">
+                  <div class="blogger-wrapper">
+                    <div class="blogger-inner-wrapper">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="header-wrapper">
+                            <div class="img-wrapper pointer pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"  data-toggle="modal" data-target=".modal-container">
+                            </div>
+                            <div class="header-content pull-left">
+                              <div class="title pointer" data-toggle="modal" data-target=".modal-container">黃小花</div>
+                              <div class="sub-title font-gray">中國上海</div>
+                              <div class="tag left inline-block text-center">生活</div>
+                              <div class="tag right inline-block text-center">时装</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <div class="social weibo"></div>
+                            <span>微博粉丝</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <span class="social wechat"></span>
+                            <span>微信观看人次</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6">
+                          <div class="social-wrapper">
+                            <span class="social nice"></span>
+                            <span>Nice粉丝</span>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <span class="number-4 pull-right">4456K</span>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-12">
+                          <div class="past-post-row">
+                            <span class="past-post">Past Post</span>
+                            <span class="img pull-right">
+                               <a class="content-switch-arrow js-content-switch-arrow" data-toggle="collapse" href="#past-post-3" aria-expanded="false" aria-controls="hidden-content" data-group="past-post-3">
+                                <div class="sprite ico-closed js-arrow"></div>
+                              </a>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="collapse js-collapse past-post-wrapper" id="past-post-3" data-group="past-post-3">
+                            <h2>谁说长大后不能和好朋友住在一起?</h2>
+                            <p>(u3s aute 3rure .o5or 3n re9re2en.er3t 3n vo5u9tate ve53t esse c355u6 .o5ore eu 0u13at nu55a 9ar3atur. )xce9teur s3nt occaecat cu93.atat non 9ro3.ent, sunt 3n cu59a qu3 o003c3a .eserunt 6o553t an36 3. est 5a,oru6.</p>
+
+                            <div class="images-wrapper center-block">
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                              <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                            </div>
+
+                            <div class="clearfix"></div>
+                            <div class="more"><a href="#">更多</a></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <hr>
+                        <div class="col-xs-6 caret-right">
+                          <div class="option-wrapper left">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">微博</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥3,000</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox pull-right">
+                                  <input id="weibo-3" class="styled js-checkbox" type="checkbox"  data-group="3" data-type="child" data-name="weibo">
+                                  <label for="weibo-3"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xs-6">
+                          <div class="option-wrapper right">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">微信</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥3,000</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox  pull-right">
+                                  <input id="wechat-3" class="styled js-checkbox" type="checkbox"  data-group="3" data-type="child" data-name="wechat">
+                                  <label for="wechat-3"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <hr>
+
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="option-wrapper package">
+                            <div class="row">
+                              <div class="col-xs-9">
+                                <div class="title">套餐 (微博和微信)</div>
+                                <div class="sub-title font-gray">(Price per post)</div>
+                                <div class="price">¥5,500</div>
+                              </div>
+                              <div class="col-xs-3">
+                                <div class="checkbox pull-right">
+                                  <input id="package-3" class="styled js-checkbox" type="checkbox" data-group="3" data-name="package" data-type="parent">
+                                  <label for="package-3"></label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div> <!-- .container -->
+    </div> <!-- .container-fluid -->
+
+    <div class="modal fade modal-container js-modal-container" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container my-container">
+            <div class="absolute img img-cross pointer" data-dismiss="modal" aria-label="Close"></div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="header-wrapper pull-left">
+                  <div class="left-container inline-block pull-left">
+                    <div class="img-wrapper" style="background-image:url(images/top-section/kol_profile_img.png)"></div>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="social-wrapper">
+                          <div class="title">
+                            <div class="social weibo"></div>
+                            <span>微博</span>
+                          </div>
+                          <div class="content">
+                            <div class="number-3 pull-left">¥3,000</div>
+                            <div class="checkbox pull-right">
+                              <input id="modal-weibo-1" class="styled js-checkbox" type="checkbox" data-group="modal" data-type="child" data-name="weibo">
+                              <label for="modal-weibo-1"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="social-wrapper">
+                          <div class="title">
+                            <div class="social wechat"></div>
+                            <span>微信</span>
+                          </div>
+                          <div class="content">
+                            <div class="number-3 pull-left">¥3,000</div>
+                            <div class="checkbox pull-right">
+                              <input id="modal-wechat-1" class="styled js-checkbox" type="checkbox"  data-group="modal" data-type="child" data-name="wechat">
+                              <label for="modal-wechat-1"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <div class="social-wrapper">
+                          <div class="title">
+                            <div class="social wechat"></div>
+                            <span>套餐 (微博和微信)</span>
+                          </div>
+                          <div class="content">
+                            <div class="number-3 pull-left">¥5,000</div>
+                            <div class="checkbox pull-right">
+                            <input id="modal-package-1" class="styled js-checkbox" type="checkbox" data-group="modal" data-name="package" data-type="parent">
+                              <label for="modal-package-1"></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="right-container header-content inline-block pull-left">
+                      <div class="title">黃小花</div>
+                      <div class="sub-title">中國上海 ● 攝影師</div>
+                      <div class="tag left inline-block text-center">生活</div>
+                      <div class="tag right inline-block text-center">时装</div>
+                      <p>最近喜欢这么拍,哈哈哈!感受P一下双子座的活泼。整个拍摄过程，我们三个大人就真的是应接不暇。 拍的时候各种和小男生一样玩，但是妈妈和我不仅仅是要玩耍的嗨皮N想有点c心戏，走个大片风，c心和情绪戏码拍起来s真是对于双子座有点困难</p>
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h3>参与数据</h3>
+
+                          <div class="data-wrapper pull-left">
+                            <div class="number-3">4,456k</div>
+                            <div class="weibo social"></div>
+                            <span>微博粉絲</span>
+                          </div>
+
+                          <div class="data-wrapper pull-left">
+                            <div class="number-3">1,090k</div>
+                            <span class="wechat social"></span>
+                            <span>微信观看人次</span>
+                          </div>
+
+                          <div class="data-wrapper pull-left">
+                            <div class="number-3">256k</div>
+                            <span class="nice social"></span>
+                            <span>粉絲</span>
+                          </div>
+
+                          <div class="data-wrapper pull-left">
+                            <div class="number-3">1,090k</div>
+                            <span class="instagram social"></span>
+                            <span>Instagram 粉絲</span>
+                          </div>
+
+                          <div class="data-wrapper pull-left">
+                            <div class="number-3">256k</div>
+                            <span class="facebook social"></span>
+                            <span>Facebook 粉絲</span>
+                          </div>
+                        </div>
+                      </div>
+                      <h3>喜歡用的詞語</h3>
+                      <div class="hashtag-wrapper">
+                        <span class="hashtag">生活</span>
+                        <span class="hashtag">喜歡這麼拍</span>
+                        <span class="hashtag">生活</span>
+                        <span class="hashtag">喜歡這麼拍</span>
+                        <span class="hashtag">生活</span>
+                        <span class="hashtag">喜歡這麼拍</span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="section-bar">
+            <div class="body-wrapper">
+              <div class="row outer-padding">
+                <div class="col-lg-4 inner-padding">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <article class="blog-wrapper">
+                        <div>
+                          <div class="social-wrapper inline-block font-gray">
+                            <div class="social weibo inline-block"></div>
+                            <div class="inline-block">微博</div>
+                          </div>
+                          <div class="social-wrapper inline-block font-gray">
+                            <div class="social wechat inline-block"></div>
+                            <div class="inline-block">微信</div>
+                          </div>
+                        </div>
+                        <h2>谁说长大后不能和好朋友住在一起?</h2>
+                        <div class="date font-gray">2015年5月14日</div>
+                        <p>(u3s aute 3rure .o5or 3n re9re2en.er3t 3n vo5u9tate ve53t esse c355u6 .o5ore eu 0u13at nu55a 9ar3atur. )xce9teur s3nt occaecat cu93.atat non 9ro3.ent, sunt 3n cu59a qu3 o003c3a .eserunt 6o553t an36 3. est 5a,oru6.</p>
+                        <div class="images-wrapper inline-block center-block">
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                        </div>
+                      </article>
+                      <article class="blog-wrapper">
+                        <div>
+                          <div class="social-wrapper inline-block font-gray">
+                            <div class="social weibo inline-block"></div>
+                            <div class="inline-block">微博</div>
+                          </div>
+                          <div class="social-wrapper inline-block font-gray">
+                            <div class="social wechat inline-block"></div>
+                            <div class="inline-block">微信</div>
+                          </div>
+                        </div>
+                        <h2>谁说长大后不能和好朋友住在一起?</h2>
+                        <div class="date font-gray">2015年5月14日</div>
+                        <p>(u3s aute 3rure .o5or 3n re9re2en.er3t 3n vo5u9tate ve53t esse c355u6 .o5ore eu 0u13at nu55a 9ar3atur. )</p>
+                        <div class="images-wrapper inline-block center-block">
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 inner-padding">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <article class="blog-wrapper">
+                        <div>
+                          <div class="social-wrapper inline-block font-gray">
+                            <div class="social weibo inline-block"></div>
+                            <div class="inline-block">微博</div>
+                          </div>
+                          <div class="social-wrapper inline-block font-gray">
+                            <div class="social wechat inline-block"></div>
+                            <div class="inline-block">微信</div>
+                          </div>
+                        </div>
+                        <h2>谁说长大后不能和好朋友住在一起?</h2>
+                        <div class="date font-gray">2015年5月14日</div>
+                        <p>(u3s aute 3rure .o5or 3n </p>
+                        <div class="images-wrapper inline-block center-block">
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                          <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 inner-padding">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <article class="blog-wrapper">
+                          <div>
+                            <div class="social-wrapper inline-block font-gray">
+                              <div class="social weibo inline-block"></div>
+                              <div class="inline-block">微博</div>
+                            </div>
+                            <div class="social-wrapper inline-block font-gray">
+                              <div class="social wechat inline-block"></div>
+                              <div class="inline-block">微信</div>
+                            </div>
+                          </div>
+                          <h2>谁说长大后不能和好朋友住在一起?</h2>
+                          <div class="date font-gray">2015年5月14日</div>
+                          <p>(u3s aute 3rure .o5or 3n re9re2en.er3t 3n vo5u9tate ve53t esse c355u6 .o5ore eu 0u13at nu55a 9ar3atur. )xce9teur s3nt occaecat cu93.atat non 9ro3.ent, sunt 3n cu59a qu3 o003c3a .eserunt 6o553t an36 3. est 5a,oru6.</p>
+                          <div class="images-wrapper inline-block center-block">
+                            <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                            <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                            <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                            <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                            <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                            <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                            <div class="past-post-img pull-left" style="background-image: url(images/top-section/kol_profile_img.png);"></div>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap-3.3.4.min.js"></script>
+    <script src="js/less-2.5.1.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/my-collaboration-kol-list.js"></script>
+    <script>
+
+    </script>
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  </body>
+</html>
