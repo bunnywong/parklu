@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="zh-cn" ng-app="myApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +12,8 @@
     <script src="js/html5shiv-3.7.2.min.js"></script>
     <script src="js/respond-1.4.2.min.js"></script>
     <![endif]-->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-controllers.js"></script>
   </head>
   <body>
     <nav class="navbar-fixed-top">
@@ -38,7 +40,7 @@
     </nav>
     <div id="main" class="container-fluid">
       <div class="col-xs-2"></div>
-      <div class="col-xs-8">
+      <div class="col-xs-8" ng-controller="PasswordFormController" ng-cloak>
         <div class="container-fluid tabSwitch">
           <div class="col-xs-9">
             <div class="text-center freeWidth tabSwitchItem tabSwitchTitle">登入設定</div>
@@ -50,42 +52,57 @@
         <div class="container-fluid formItem">
           <div class="col-xs-12">
             <div class="col-xs-4"><h3>電郵地址</h3></div>
-            <div class="col-xs-8"><input id="email" type="text" name="email" /></div>
+            <div class="col-xs-8">
+              <input type="text" 
+                     ng-model="email" 
+                     ng-change="isValidEmail = checkEmail(email)"
+                     ng-class="{error: !isValidEmail}"/>
+            </div>
           </div>
 
           <div class="col-xs-12">
             <div class="col-xs-4"></div>
-            <div id="emailError" class="col-xs-8 hide">這不是一個正確的電郵地址</div>
+            <div class="col-xs-8" ng-if="!isValidEmail">這不是一個正確的電郵地址</div>
           </div>
         </div>
 
         <div class="container-fluid formItem">
           <div class="col-xs-12">
             <div class="col-xs-4"><h3>新的電郵地址</h3></div>
-            <div class="col-xs-8"><input id="newEmail" type="text" name="newEmail" /></div>
+            <div class="col-xs-8">
+              <input type="text"
+                     ng-model="newEmail"
+                     ng-change="isValidNewEmail = checkEmail(newEmail)"
+                     ng-class="{error: !isValidNewEmail}"/>
+            </div>
           </div>
 
           <div class="col-xs-12">
             <div class="col-xs-4"></div>
-            <div id="newEmailError" class="col-xs-8 hide">這不是一個正確的電郵地址</div>
+            <div class="col-xs-8" ng-if="!isValidNewEmail">這不是一個正確的電郵地址</div>
           </div>
         </div>
 
         <div class="container-fluid formItem">
           <div class="col-xs-12">
             <div class="col-xs-4"><h3>密碼</h3></div>
-            <div class="col-xs-8"><input id="password" type="password" name="password" /></div>
+            <div class="col-xs-8">
+              <input type="password"
+                     ng-model="password"
+                     ng-change="isValidPassword = checkPassword(password)"
+                     ng-class="{error: !isValidPassword}" />
+            </div>
           </div>
 
           <div class="col-xs-12">
             <div class="col-xs-4"></div>
-            <div id="passwordError" class="col-xs-8 hide">這不是一個正確的密碼</div>
+            <div id="passwordError" class="col-xs-8" ng-if="!isValidPassword">這不是一個正確的密碼</div>
           </div>
         </div>
         
         <div class="container-fluid">
           <div class="col-xs-12 text-center">
-            <button id="save" class="height60Btn1">儲存</button>
+            <button class="height60Btn1">儲存</button>
           </div>
         </div>
       </div>
@@ -93,43 +110,7 @@
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap-3.3.4.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/base.js"></script>
-    <script>
-      function validateEmails() {
-        if (!isEmail($('#email').val())) {
-          $('#emailError').removeClass('hide');
-        } else {
-          $('#emailError').addClass('hide');
-        }
 
-        if (!isEmail($('#newEmail'))) {
-          $('#newEmailError').removeClass('hide');
-        } else {
-          $('#newEmailError').addClass('hide');
-        }
-      };
-
-      function validatePassword() {
-        var password = $('#password').val();
-        if (!isValidPassword(password)) {
-          $('#passwordError').removeClass('hide');
-        } else {
-          $('#passwordError').addClass('hide');
-        }
-      };
-
-      function validate() {
-        validateEmails();
-        validatePassword();
-      };
-
-      $(function() {
-        $('#save').click(function(event) {
-          event.preventDefault();
-          validate();
-        });
-      })
-    </script>
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </body>
 </html>
