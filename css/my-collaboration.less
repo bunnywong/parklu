@@ -43,27 +43,25 @@ article {
   border-top: 1px solid transparent!important;
 }
 .col-xs-15,
-    .col-sm-15,
-    .col-md-15,
-    .col-lg-15 {
-    position      : relative;
-    min-height    : 1px;
-    padding-right : 15px;
-    padding-left  : 15px;
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position      : relative;
+  min-height    : 1px;
+  padding-right : 15px;
+  padding-left  : 15px;
+}
+.col-xs-15 {
+  width: 20%;
+  float: left;
+  &.col-xs-15-2 {
+    width: 40%;
   }
-@media (min-width: 1200px) {
-  .col-lg-15 {
-    width: 20%;
-    float: left;
-    &.col-lg-15-2 {
-      width: 40%;
-    }
-    &.col-lg-15-3 {
-      width: 60%;
-    }
-    &.col-lg-15-4 {
-      width: 80%;
-    }
+  &.col-xs-15-3 {
+    width: 60%;
+  }
+  &.col-xs-15-4 {
+    width: 80%;
   }
 }
 
@@ -76,7 +74,7 @@ body.steps {
     font-size: 14px;
     border: 1px solid @gray;
     border-radius: 50px;
-    .col-md-15 {
+    .col-xs-15 {
       padding: 0px;
       a {
         color: @black;
@@ -117,6 +115,7 @@ body.kol-list {
   }
   .my-container {
     width: 1210px;
+    min-width: 1210px;
     margin-bottom: 30px;
   }
   .images-wrapper {
@@ -664,6 +663,7 @@ body.invoice-deposit-1 {
   }
   .my-container {
     width: 1210px;
+    min-width: 1210px;
     margin-bottom: 30px;
   }
   .images-wrapper {
