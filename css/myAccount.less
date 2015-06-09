@@ -67,7 +67,7 @@ color:#333;
   }
 }
 
-.height60Btn1 { // [已評分]
+.height60Btn1 {
   height: 60px;
   color: white;
   background-color: @black;
@@ -88,7 +88,9 @@ color:#333;
   }
 }
 
-.height80Btn1 { // BIG
+// save / cancel
+.height80Btn { 
+  width: 300px;
   height: 80px;
   color: white;
   background-color: @black;
@@ -99,6 +101,13 @@ color:#333;
   &:active {
     color: white;
     background-color: #000000;
+  }
+  &:disabled {
+    background-color: @gray;
+  }
+  &.cancel {
+    background-color: @gray;
+    margin-left: 20px
   }
 }
 
@@ -406,4 +415,28 @@ section.step-bar {
 .delivery-table-row {
   padding-top: 10px;
   padding-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  background-color: @gray-light;
+  border: none;
+  &[type=text], &[type=password], &[type=email] {
+    line-height: 50px;
+    padding-left: 20px;
+    border-left: 6px solid @gray-light;
+    &:focus {
+      outline: 2px solid @gray;
+    }
+    &~span.error-msg {
+      display: none;
+    }
+    &.error {
+      border-left: 6px solid #FF0000;
+      &~span.error-msg {
+        color: #FF0000;
+        display: block;
+      }
+    }
+  }
 }
