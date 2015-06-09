@@ -4,10 +4,10 @@
  =Debug
  =Import
  =To be move
- =Step 3
+ =Common Section
+ =Step [3] KOL List & Step[2][5] Invoice Deposite
   (PerfectPixel: 140 / 3)
 -------------------------------------------------- */
-
 
 /* =Debug
 -------------------------------------------------- */
@@ -35,9 +35,18 @@ article {
 -------------------------------------------------- */
 @import "main.less";
 
-
 /*  =To be move
 -------------------------------------------------- */
+@blue: #0D98E8;
+@green: #4EA1A7;
+
+a {
+  text-decoration: none;
+}
+.img {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .transparent-top-border {
   // For sorting dropdown
   border-top: 1px solid transparent!important;
@@ -65,51 +74,228 @@ article {
   }
 }
 
-/*  =Step 3
-    Pixl perfect Ref: Step-3_Full.png | x150 : y0
+/*  =Common Block
 -------------------------------------------------- */
-body.steps {
-  section.step-bar {
-    margin-top: 110px;
-    font-size: 14px;
-    border: 1px solid @gray;
-    border-radius: 50px;
-    .col-xs-15 {
-      padding: 0px;
-      a {
+button.size-middle {
+  margin-top: 20px;
+  font-size: 18px;
+  padding: 20px 0px 15px 0px;
+  min-width: 180px;
+}
+button.style-gray {
+  color: @white;
+  background-color: @gray;
+  &:hover {
+    background-color: @gray-lighter;
+  }
+  &:active {
+    background-color: #5A6064;
+  }
+}
+button.style-black {
+  color: @white;
+  background-color: @black;
+  &:hover {
+    background-color: @black-lighter;
+  }
+  &:active {
+    background-color: @black-dark;
+  }
+}
+.button-container {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  max-width: 630px;
+  button {
+    width: 300px;
+    font-size: 20px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    &.first {
+      margin-right: 20px;
+    }
+  }
+}
+
+/*  =Common Section
+-------------------------------------------------- */
+section.step-bar {
+margin-top: 110px;
+font-size: 14px;
+border: 1px solid @gray;
+border-radius: 50px;
+.col-xs-15 {
+  padding: 0px;
+  a {
+    color: @black;
+    &:hover {
+      text-decoration: none;
+    }
+    div {
+      border-radius: 20px;
+      padding: 10px;
+      position: relative;
+      background-color: transparent;
+      &.active, &.active:hover {
+        cursor: text;
+        color: @white-bg;
+        background-color: @black;
+      }
+      &:hover {
         color: @black;
-        &:hover {
-          text-decoration: none;
-        }
-        div {
-          border-radius: 20px;
-          padding: 10px;
-          position: relative;
-          background-color: transparent;
-          &.active, &.active:hover {
-            cursor: text;
-            color: @white-bg;
-            background-color: @black;
-          }
-          &:hover {
-            color: @black;
-            background-color: @gray-light;
-          }
-          &:active {
-            color: @black;
-            background-color: @gray;
-          }
-        }
+        background-color: @gray-light;
+      }
+      &:active {
+        color: @black;
+        background-color: @gray;
       }
     }
   }
 }
-body.kol-list {
-  @blue: #0D98E8;
-  @green: #4EA1A7;
-  a {
-    text-decoration: none;
+}
+section.event {
+  margin-top: 20px;
+  background: @gray-light;
+  padding: 20px 40px 0px 40px;
+  min-height: 150px;
+  article {
+    &.description-container {
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 0px;
+      }
+      h1 {
+        margin-top: 5px;
+      }
+      p.description {
+        margin: 20px 0px;
+        span {
+          font-size: 14px;
+          &:not(.first) {
+            margin-left: 20px;
+          }
+        }
+      }
+      a.content-switch-arrow {
+        top: -8px;
+        padding: 10px;
+        float: right;
+        right: -10px;
+        position: relative;
+      }
+    }
+    &.joined-bloggers-container {
+      .section-bar {
+        margin-top: 0px;
+      }
+      .bloggers-attend-inner-container {
+        margin-top: 25px;
+        color: @gray;
+        &.absent {
+          opacity: 0.2;
+        }
+        // 1. Joined blogger
+        .blogger-wrapper {
+          margin-top: 5px;
+          display: inline-block;
+          &:nth-child(2n) { // For #2, 4, 6
+            margin-left: 15.5px;
+            margin-right: 15.5px;
+          }
+          .img-wrapper {
+            max-height: 140px;
+            max-width: 140px;
+            overflow: hidden;
+            position: relative;
+            background-image: url(../images/top-section/kol_profile_img.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 140px;
+            width: 140px;
+            div.img-delete {
+              display: none;
+              right: 10px;
+              top: 10px;
+              height: 25px;
+              width: 25px;
+              cursor: pointer;
+              background: url(../images/top-section/delete_button.png) no-repeat;
+            }
+            &:hover {
+              div.img-delete {
+                display: block;
+              }
+            }
+          }
+          h3 {
+            margin-bottom: 5px;
+          }
+          .status-bar-wrapper {
+            .status-bar {
+              margin-top: 5px;
+              height: 5px;
+              width: 33.33%;
+              float: left;
+              &.empty {
+                background-color: @gray;
+              }
+              &.yellow {
+                background-color: @yellow;
+              }
+              &.pink {
+                background-color: @pink;
+              }
+              &.green {
+                background-color: @green;
+              }
+            }
+          }
+        }
+        // 2. Data summary
+        .sprite {
+          float: left;
+          margin-right: 5px;
+          width: 19px;
+          height: 15px;
+          &.weibo-on {
+            background: url(../images/top-section/weibo_logo_red.png) no-repeat;
+          }
+          &.weibo-off {
+            background: url(../images/top-section/weibo_logo_grey.png) no-repeat;
+          }
+          &.wechat-on {
+            background: url(../images/top-section/wechat_logo_green.png) no-repeat;
+          }
+          &.wechat-off {
+            background: url(../images/top-section/wechat_logo_grey.png) no-repeat;
+          }
+        }
+      }
+
+    }
+    .fans-data-container {
+      padding-bottom: 40px;
+      .section-bar {
+        margin-top: 10px;
+      }
+      h3 {
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+      .data-wrapper {
+        margin-right: 50px;
+      }
+      .total-tally {
+        margin-left: 30px;
+      }
+    }
   }
+}
+
+/*  =Step [3] KOL List & Step[2][5] Invoice Deposite
+    Pixl perfect Ref: Step-3_Full.png | x150 : y0
+-------------------------------------------------- */
+body.kol-list {
   .bg-white {
     background-color: @white;
   }
@@ -172,166 +358,17 @@ body.kol-list {
       min-width: 55px;
       min-height: 25px;
     &.left {
-      border: 1px solid @blue;
+      border: 2px solid @blue;
     }
     &.right {
       margin-left: 5px;
-      border: 1px solid @green;
+      border: 2px solid @green;
     }
   }
   hr.section-bar {
     width: 100%;
     height: 1px;
     border-bottom: 1px solid @gray;
-  }
-	section.hero {
-		margin-top: 20px;
-		background: @gray-light;
-		padding: 20px 40px 0px 40px;
-		min-height: 150px;
-    article {
-      &.description-container {
-        h3 {
-          margin-top: 20px;
-          margin-bottom: 0px;
-        }
-        h1 {
-          margin-top: 5px;
-        }
-        p.description {
-          margin: 20px 0px;
-          span {
-            font-size: 14px;
-            &:not(.first) {
-              margin-left: 20px;
-            }
-          }
-        }
-        a.content-switch-arrow {
-          top: -8px;
-          padding: 10px;
-          float: right;
-          right: -10px;
-          position: relative;
-        }
-      }
-      &.joined-bloggers-container {
-        .section-bar {
-          margin-top: 0px;
-        }
-        .joined-bloggers-inner-container {
-          margin-top: 25px;
-
-          // 1. Joined blogger
-          .blogger-wrapper {
-            margin-top: 5px;
-            display: inline-block;
-            &.first {
-              margin-right: 2.5px; // Dirty script
-            }
-            &:not(.first) {
-              margin-left: 15px;
-
-            }
-            .img-wrapper {
-              max-height: 140px;
-              max-width: 140px;
-              overflow: hidden;
-              position: relative;
-              background-image: url(../images/top-section/kol_profile_img.png);
-              background-repeat: no-repeat;
-              background-size: cover;
-              height: 140px;
-              width: 140px;
-              div.img-delete {
-                display: none;
-                right: 10px;
-                top: 10px;
-                height: 25px;
-                width: 25px;
-                cursor: pointer;
-                background: url(../images/top-section/delete_button.png) no-repeat;
-              }
-              &:hover {
-                div.img-delete {
-                  display: block;
-                }
-              }
-            }
-            h3 {
-              margin-bottom: 5px;
-            }
-            .status-bar-wrapper {
-              .status-bar {
-                margin-top: 5px;
-                height: 5px;
-                width: 33.33%;
-                float: left;
-                &.empty {
-                  background-color: @gray;
-                }
-                &.yellow {
-                  background-color: @yellow;
-                }
-                &.pink {
-                  background-color: @pink;
-                }
-                &.green {
-                  background-color: @green;
-                }
-              }
-            }
-          }
-          // 2. Data summary
-          .sprite {
-            float: left;
-            margin-right: 5px;
-            width: 19px;
-            height: 15px;
-            &.weibo-on {
-              background: url(../images/top-section/weibo_logo_red.png) no-repeat;
-            }
-            &.weibo-off {
-              background: url(../images/top-section/weibo_logo_grey.png) no-repeat;
-            }
-            &.wechat-on {
-              background: url(../images/top-section/wechat_logo_green.png) no-repeat;
-            }
-            &.wechat-off {
-              background: url(../images/top-section/wechat_logo_grey.png) no-repeat;
-            }
-          }
-          p {
-            color: @gray;
-          }
-        }
-
-      }
-      .fans-data-container {
-        padding-bottom: 40px;
-        .section-bar {
-          margin-top: 10px;
-        }
-        h3 {
-          margin-top: 15px;
-          margin-bottom: 10px;
-        }
-        .data-wrapper {
-          margin-right: 50px;
-        }
-        .total-tally {
-          margin-left: 30px;
-        }
-      }
-    }
-	}
-  button {
-    margin-top: 20px;
-    font-size: 18px;
-    color: @white-bg;
-    background-color: @black;
-    padding: 20px 0px 15px 0px;
-    min-width: 180px
   }
   .checkbox {
     @base: 25px;
@@ -499,7 +536,7 @@ body.kol-list {
                   background: url(../images/bottom-section/wechat_bot_grey.png);
                 }
                 &.nice {
-                  width: 25px;
+                  width: 18px;
                   height: 21px;
                   background: url(../images/bottom-section/nice_bot_grey.png);
                 }
@@ -536,16 +573,60 @@ body.kol-list {
     }
   }
 
+  .modal-del-container {
+    .modal-dialog {
+      margin-top: 250px;
+      max-width: 265px;
+      border: 5px solid @gray;
+      background: white;
+      color: @black-darker;
+      .modal-content {
+        border-radius: 0px;
+        border: none;
+        .title, .content {
+          padding: 10px;
+        }
+        .title {
+          font-size: 16px;
+        }
+        hr {
+          margin-top: -5px;
+          margin-bottom: 0px;
+          width: 90%;
+        }
+        .content {
+          font-size: 13px;
+        }
+        .img-modal-cross {
+          background-image: url(../images/modal/close_btn.png);
+          height: 20px;
+          width: 20px;
+          right: 10px;
+          top: 10px;
+        }
+        button {
+          margin-top: 10px;
+          width: 50%;
+          height: 45px;
+        }
+      }
+    }
+  }
   .modal-container {
     .modal-dialog {
+      margin-top: 250px;
       width: 1200px;
-      .img-cross {
-        background-image: url(../images/modal/close_btn.png);
-        background-repeat: no-repeat;
-        height: 39px;
-        width: 39px;
-        right: 25px;
-        top: 25px;
+      .modal-content {
+        box-shadow: none;
+        border: none;
+        .img-modal-cross {
+          background-image: url(../images/modal/close_btn.png);
+          background-repeat: no-repeat;
+          height: 39px;
+          width: 39px;
+          right: 25px;
+          top: 25px;
+        }
       }
       .modal-content {
         background-color: @white-bg;
@@ -555,6 +636,7 @@ body.kol-list {
         .my-container {
           margin-top: 75px;
           width: 1050px;
+          min-width: 1050px;
           .header-wrapper {
             padding-bottom: 35px;
             .left-container {
@@ -652,12 +734,7 @@ body.kol-list {
 }
 // PxPerfect: 232: 340
 // PxPerfect: 232: 284
-body.invoice-deposit-1 {
-  @blue: #0D98E8;
-  @green: #4EA1A7;
-  a {
-    text-decoration: none;
-  }
+body.invoice-deposit {
   .bg-white {
     background-color: @white;
   }
@@ -732,174 +809,6 @@ body.invoice-deposit-1 {
     height: 1px;
     border-bottom: 1px solid @gray;
   }
-  section.hero {
-    margin-top: 20px;
-    background: @gray-light;
-    padding: 20px 40px 0px 40px;
-    min-height: 150px;
-    article {
-      &.description-container {
-        h3 {
-          margin-top: 20px;
-          margin-bottom: 0px;
-        }
-        h1 {
-          margin-top: 5px;
-        }
-        p.description {
-          margin: 20px 0px;
-          span {
-            font-size: 14px;
-            &:not(.first) {
-              margin-left: 20px;
-            }
-          }
-        }
-        a.content-switch-arrow {
-          top: -8px;
-          padding: 10px;
-          float: right;
-          right: -10px;
-          position: relative;
-        }
-      }
-      &.joined-bloggers-container {
-        .section-bar {
-          margin-top: 0px;
-        }
-        .joined-bloggers-inner-container {
-          margin-top: 25px;
-
-          // 1. Joined blogger
-          .blogger-wrapper {
-            margin-top: 5px;
-            display: inline-block;
-            &.first {
-              margin-right: 2.5px; // Dirty script
-            }
-            &:not(.first) {
-              margin-left: 15px;
-
-            }
-            .img-wrapper {
-              max-height: 140px;
-              max-width: 140px;
-              overflow: hidden;
-              position: relative;
-              background-image: url(../images/top-section/kol_profile_img.png);
-              background-repeat: no-repeat;
-              background-size: cover;
-              height: 140px;
-              width: 140px;
-              div.img-delete {
-                display: none;
-                right: 10px;
-                top: 10px;
-                height: 25px;
-                width: 25px;
-                cursor: pointer;
-                background: url(../images/top-section/delete_button.png) no-repeat;
-              }
-              &:hover {
-                div.img-delete {
-                  display: block;
-                }
-              }
-            }
-            h3 {
-              margin-bottom: 5px;
-            }
-            .status-bar-wrapper {
-              .status-bar {
-                margin-top: 5px;
-                height: 5px;
-                width: 33.33%;
-                float: left;
-                &.empty {
-                  background-color: @gray;
-                }
-                &.yellow {
-                  background-color: @yellow;
-                }
-                &.pink {
-                  background-color: @pink;
-                }
-                &.green {
-                  background-color: @green;
-                }
-              }
-            }
-          }
-          // 2. Data summary
-          .sprite {
-            float: left;
-            margin-right: 5px;
-            width: 19px;
-            height: 15px;
-            &.weibo-on {
-              background: url(../images/top-section/weibo_logo_red.png) no-repeat;
-            }
-            &.weibo-off {
-              background: url(../images/top-section/weibo_logo_grey.png) no-repeat;
-            }
-            &.wechat-on {
-              background: url(../images/top-section/wechat_logo_green.png) no-repeat;
-            }
-            &.wechat-off {
-              background: url(../images/top-section/wechat_logo_grey.png) no-repeat;
-            }
-          }
-          p {
-            color: @gray;
-          }
-        }
-
-      }
-      .fans-data-container {
-        padding-bottom: 40px;
-        .section-bar {
-          margin-top: 10px;
-        }
-        h3 {
-          margin-top: 15px;
-          margin-bottom: 10px;
-        }
-        .data-wrapper {
-          margin-right: 50px;
-        }
-        .total-tally {
-          margin-left: 30px;
-        }
-      }
-    }
-  }
-  button {
-    margin-top: 20px;
-    font-size: 18px;
-    color: @white-bg;
-    background-color: @black;
-    padding: 20px 0px 15px 0px;
-    min-width: 180px
-  }
-  button.style-gray {
-    background-color: @gray;
-    &:hover {
-      background-color: @gray-lighter;
-    }
-    &:active {
-      background-color: #5A6064;
-    }
-  }
-  button.style-black {
-    background-color: @black;
-    &:hover {
-      background-color: @black-lighter;
-    }
-    &:active {
-      background-color: @black-dark;
-    }
-  }
-
   button.edit-cooperation {
     top: 0px;
     right: 0px;
@@ -911,20 +820,6 @@ body.invoice-deposit-1 {
 
   .description-container {
     position: relative;
-  }
-  .button-container {
-    margin-top: 20px;
-    margin-bottom: 30px;
-    max-width: 630px;
-    button {
-      width: 300px;
-      font-size: 20px;
-      padding-top: 25px;
-      padding-bottom: 30px;
-      &.confirm {
-        margin-right: 20px;
-      }
-    }
   }
   section.invoice-detail {
     margin-top: 50px;
@@ -960,8 +855,6 @@ body.invoice-deposit-1 {
     }
   }
 }
-
-
 
 // Pix Perfect: 170 | 0
 // Pix Perfect: 170 | -10
