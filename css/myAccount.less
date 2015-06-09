@@ -216,6 +216,32 @@ color:#333;
   }
 }
 
+.tab {
+  height: 53px;
+  line-height: 50px;
+  margin-bottom: 10px;
+  .tabSwitchItem {
+    width: 100px;
+    border-bottom: 2px solid #D5D5D5;
+    font-size: 14px;
+    color: #636A6A;
+    &.tabSwitchTitle {
+      font-size: 18px;
+      color: #636A6A;
+      padding-left: 0;
+    }
+    &.hoverable {
+      cursor: pointer;
+      color: rgba(99, 106, 106, 0.5);
+      &.current, &:hover {
+        color: #0D98E8;
+        border-bottom: 2px solid #0D98E8;
+        background: linear-gradient(0deg, #0D98E8 0px, white 2px);
+      }
+    }
+  }
+}
+
 .tabSwitch {
   height: 53px;
   line-height: 50px;
