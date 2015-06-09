@@ -71,5 +71,5 @@ myApp.controller('PasswordFormController', function ($scope) {
 
     $scope.checkRepeatPassword = function () {
         return $scope.newPassword == $scope.newPasswordRepeat;
-    }
+    };
 });
