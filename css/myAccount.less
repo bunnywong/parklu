@@ -468,4 +468,40 @@ input {
       }
     }
   }
+  &[type=checkbox] {
+    opacity: 0;
+    float: left;
+    width: 18px;
+
+    &[type=checkbox]+label {
+      color: @gray;
+      margin: 0;
+      clear: none;
+      padding: 5px 0 4px 24px;
+      background: url('../images/form/checkbox_off.png') left center no-repeat;
+    }
+    &[type=checkbox]:checked+label {
+      color: @black-light;
+      background-image: url('../images/form/checkbox_on.png');
+    }
+  }
+
+  &[type=radio] {
+    opacity: 0;
+    float: left;
+    width: 18px;
+
+    &[type=radio]+label {
+      color: @gray;
+      margin: 0;
+      clear: none;
+      padding: 5px 0 4px 24px;
+      background: url('../images/form/radiobtn_off.png') left center no-repeat;
+    }
+    &[type=radio]:checked+label {
+      color: @black-light;
+      background-image: url('../images/form/radiobtn_on.png');
+    }
+  }
+
 }
