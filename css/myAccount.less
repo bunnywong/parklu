@@ -219,11 +219,10 @@ color:#333;
 
 .tab {
   height: 53px;
-  line-height: 50px;
+  line-height: 25px;
   margin-bottom: 10px;
   .tabSwitchItem {
     width: 100px;
-    border-bottom: 2px solid #D5D5D5;
     font-size: 14px;
     color: #636A6A;
     &.tabSwitchTitle {
@@ -231,26 +230,26 @@ color:#333;
       color: #636A6A;
       padding-left: 0;
     }
-    &.hoverable {
-      cursor: pointer;
-      color: rgba(99, 106, 106, 0.5);
-      &.current, &:hover {
-        color: #0D98E8;
-        border-bottom: 2px solid #0D98E8;
-        background: linear-gradient(0deg, #0D98E8 0px, white 2px);
-      }
+    &:hover {
+      border-bottom: 2px solid #D5D5D5;
     }
   }
   a:hover {
     text-decoration: none;
+  }
+  p {
+    margin: 0;
   }
 }
 
 a.anchor{
   display: block; 
   position: relative; 
-  top: 0px; 
+  top: -20px; 
   visibility: hidden;
+  &.non-new-session {
+    top: -80px;
+  }
 }
 
 .tabSwitch {
@@ -446,6 +445,10 @@ section.step-bar {
 
   &.first-section {
     margin-top: 60px;
+  }
+  &.tab-section {
+    margin-top: 60px;
+    margin-bottom: 40px;
   }
 }
 
