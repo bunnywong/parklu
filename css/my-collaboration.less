@@ -198,7 +198,8 @@ section.event {
         .blogger-wrapper {
           margin-top: 5px;
           display: inline-block;
-          &:nth-child(2n) { // For #2, 4, 6
+          &:nth-child(2), &:nth-child(4), &:nth-child(6),
+          &:nth-child(9), &:nth-child(11), &:nth-child(13)  {
             margin-left: 15.5px;
             margin-right: 15.5px;
           }
@@ -427,25 +428,46 @@ body.kol-list {
         background-color: @white-bg;
         padding: 0px;
         li {
-          a:hover {
-            background: @gray-light;
-          }
-          a:active {
-            background: @gray;
-          }
-          a {
-            margin: 0px auto 0px auto;
-            padding: 5px 10px;
+          min-width: 250px;
+          box-shadow: none;
+          &:not(:first-child):hover {
+            a {
+              border-top: 1px solid @gray-light;
+            }
           }
           &:not(:first-child) {
             a {
               border-top: 1px solid @gray;
             }
           }
-          &:not(:first-child):hover {
-            a {
-              border-top: 1px solid @gray-light;
+          &:hover {
+            background: @gray-light;
+          }
+          &:active {
+            background: @gray;
+            &:not(:first-child) > a {
+              border-top: 1px solid @gray!important;
             }
+          }
+          &:first-child > a:hover {
+            border-top: none;
+          }
+
+          // <a>
+          a:hover {
+            background: @gray-light;
+            border-top: 1px solid transparent;
+          }
+          a:active {
+            background: @gray;
+          }
+          a:visited, a:focus {
+            outline: none;
+          }
+          a {
+            margin: 0px auto 0px auto;
+            padding: 10px 10px;
+            max-width: 230px;
           }
         }
       }
