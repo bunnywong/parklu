@@ -70,6 +70,9 @@ button {
   padding-left: 25px;
   padding-right: 25px;
 }
+button:focus  {
+  outline: none;
+}
 input {
   width: 100%;
   background-color: @gray-light;
@@ -193,6 +196,12 @@ nav .dropdown-menu {
 
 #navbarTopRight {
   padding-right: 10px;
+  a {
+    color: @white;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 #navbarAvatar {

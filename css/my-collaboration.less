@@ -1,81 +1,28 @@
 /*
 - Table of content -
 
- =Debug
  =Import
- =To be move
+ =Variable
+ =Common Element
  =Common Section
- =Step [3] KOL List & Step[2][5] Invoice Deposite
-  (PerfectPixel: 140 / 3)
+ =KOL List
+ =Invoice Deposit
 -------------------------------------------------- */
-
-/* =Debug
--------------------------------------------------- */
-/* section {
-  .debug();
-}
-article {
-  .debug2();
-} */
-
-.debug {
-  border: 1px solid red;
-}
-.debug2 {
-  border: 1px solid green;
-}
-.debug3 {
-  border: 1px solid blue;
-}
-.debugbg {
-  background-color: pink;
-}
 
 /*  =Import
 -------------------------------------------------- */
 @import "main.less";
 
-/*  =To be move
+/*  =Variable
 -------------------------------------------------- */
 @blue: #0D98E8;
 @green: #4EA1A7;
 
+/*  =Common Element
+-------------------------------------------------- */
 a {
   text-decoration: none;
 }
-.img {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.transparent-top-border {
-  // For sorting dropdown
-  border-top: 1px solid transparent!important;
-}
-.col-xs-15,
-.col-sm-15,
-.col-md-15,
-.col-lg-15 {
-  position      : relative;
-  min-height    : 1px;
-  padding-right : 15px;
-  padding-left  : 15px;
-}
-.col-xs-15 {
-  width: 20%;
-  float: left;
-  &.col-xs-15-2 {
-    width: 40%;
-  }
-  &.col-xs-15-3 {
-    width: 60%;
-  }
-  &.col-xs-15-4 {
-    width: 80%;
-  }
-}
-
-/*  =Common Block
--------------------------------------------------- */
 button.size-middle {
   margin-top: 20px;
   font-size: 18px;
@@ -116,42 +63,67 @@ button.style-black {
     }
   }
 }
-
+.img {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position      : relative;
+  min-height    : 1px;
+  padding-right : 15px;
+  padding-left  : 15px;
+}
+.col-xs-15 {
+  width: 20%;
+  float: left;
+  &.col-xs-15-2 {
+    width: 40%;
+  }
+  &.col-xs-15-3 {
+    width: 60%;
+  }
+  &.col-xs-15-4 {
+    width: 80%;
+  }
+}
 /*  =Common Section
 -------------------------------------------------- */
 section.step-bar {
-margin-top: 110px;
-font-size: 14px;
-border: 1px solid @gray;
-border-radius: 50px;
-.col-xs-15 {
-  padding: 0px;
-  a {
-    color: @black;
-    &:hover {
-      text-decoration: none;
-    }
-    div {
-      border-radius: 20px;
-      padding: 10px;
-      position: relative;
-      background-color: transparent;
-      &.active, &.active:hover {
-        cursor: text;
-        color: @white-bg;
-        background-color: @black;
-      }
+  margin-top: 110px;
+  font-size: 14px;
+  border: 1px solid @gray;
+  border-radius: 50px;
+  .col-xs-15 {
+    padding: 0px;
+    a {
+      color: @black;
       &:hover {
-        color: @black;
-        background-color: @gray-light;
+        text-decoration: none;
       }
-      &:active {
-        color: @black;
-        background-color: @gray;
+      div {
+        border-radius: 20px;
+        padding: 10px;
+        position: relative;
+        background-color: transparent;
+        &.active, &.active:hover {
+          cursor: text;
+          color: @white-bg;
+          background-color: @black;
+        }
+        &:hover {
+          color: @black;
+          background-color: @gray-light;
+        }
+        &:active {
+          color: @black;
+          background-color: @gray;
+        }
       }
     }
   }
-}
 }
 section.event {
   margin-top: 20px;
@@ -293,8 +265,7 @@ section.event {
   }
 }
 
-/*  =Step [3] KOL List & Step[2][5] Invoice Deposite
-    Pixl perfect Ref: Step-3_Full.png | x150 : y0
+/*  =KOL List
 -------------------------------------------------- */
 body.kol-list {
   .bg-white {
@@ -754,8 +725,9 @@ body.kol-list {
     }
   }
 }
-// PxPerfect: 232: 340
-// PxPerfect: 232: 284
+
+/*  =Invoice Deposit
+-------------------------------------------------- */
 body.invoice-deposit {
   .bg-white {
     background-color: @white;
@@ -877,6 +849,3 @@ body.invoice-deposit {
     }
   }
 }
-
-// Pix Perfect: 170 | 0
-// Pix Perfect: 170 | -10
